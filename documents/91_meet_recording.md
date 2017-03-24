@@ -11,4 +11,4 @@
 （最后验收时再整理在个人技术报告中）
 ![mindmap1-lxp](../assets/images/mindmap1-lxp.jpg)*credit: lxp*
 ![mindmap1-hyp](../assets/images/mindmap1-hyp.jpg)*credit: hyp*
-
+![mindmap1-jzh](../assets/images/mindmap1-jzh.png)*credit: jzh*
