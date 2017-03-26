@@ -9,9 +9,26 @@
 
 ## 记录会议“思维导图”
 （最后验收时再整理在个人技术报告中）
-![mindmap1-lxp](../assets/images/mindmap1-lxp.jpg)*credit: lxp*
-![mindmap1-hyp](../assets/images/mindmap1-hyp.jpg)*credit: hyp*
-![mindmap1-jzh](../assets/images/mindmap1-jzh.png)*credit: jzh*
-![mindmap1-jzh](../assets/images/mindmap1-cx.png)*credit: cx*
-![mindmap1-wfy](../assets/images/mindmap1-wfy.png)*credit: wfy*
-![mindmap1-zzj](../assets/images/mindmap1-zzj.png)*credit: zzj*
+![mindmap1-lxp](../assets/images/mindmap1-lxp.jpg)
+
+*credit: lxp*
+
+![mindmap1-hyp](../assets/images/mindmap1-hyp.jpg)
+
+*credit: hyp*
+
+![mindmap1-jzh](../assets/images/mindmap1-jzh.png)
+
+*credit: jzh*
+
+![mindmap1-jzh](../assets/images/mindmap1-cx.png)
+
+*credit: cx*
+
+![mindmap1-wfy](../assets/images/mindmap1-wfy.png)
+
+*credit: wfy*
+
+![mindmap1-zzj](../assets/images/mindmap1-zzj.png)
+
+*credit: zzj*
