@@ -13,3 +13,4 @@
 ![mindmap1-hyp](../assets/images/mindmap1-hyp.jpg)*credit: hyp*
 ![mindmap1-jzh](../assets/images/mindmap1-jzh.png)*credit: jzh*
 ![mindmap1-jzh](../assets/images/mindmap1-cx.png)*credit: cx*
+![mindmap1-wfy](../assets/images/mindmap1-wfy.bmp)*credit: wfy*
