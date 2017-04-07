@@ -32,3 +32,10 @@
 ![mindmap1-zzj](../assets/images/mindmap1-zzj.png)
 
 *credit: zzj*
+
+# 第二次会议纪要
+2017.4.7
+迭代三阶段
+1. 纯前端版本
+2. 加数据库版本
+3. 高性能版本
