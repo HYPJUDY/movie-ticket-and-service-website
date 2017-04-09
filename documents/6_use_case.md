@@ -1,8 +1,11 @@
+##Use Case 图
+![Use case图][7]
+
 ##Use case 文本
 
  1. Brief Level
  - **注册与登录**：用户可以点击注册按钮进入注册页面，输入用户名、邮箱、登录密码，在确认用户名没有重复、密码符合规范并验证邮箱之后，提示用户注册成功。已经注册的用户可以点击登录按钮进入登录页面，输入正确的用户名和密即可登录成功。
- - **查看电影咨询**：用户可以浏览每日最新的电影新闻、预告片、电影音乐等等。
+ - **查看电影资讯**：用户可以浏览每日最新的电影新闻、预告片、电影音乐等等。
  - **查询电影**：用户可以按照年份、类型、国家、评分等多种类别筛选想要的电影；同时也可以通过搜索框直接按关键字搜索电影。
  - **收藏电影**：用户可以在每部电影对应的界面中点击收藏按钮，这些收藏的电影可以在个人中心->我的收藏中看到；同时我们也提供浏览历史功能，用户可以在个人中心->浏览历史中查看最近浏览的电影，以便快捷查看。
  - **提醒上映**：对于还未上映的电影，用户可以在详情页中点击“想看”按钮，对于这些用户想看的电影，我们会在电影上映前3天提醒用户购票。
@@ -79,3 +82,5 @@
   [4]: https://raw.githubusercontent.com/HYPJUDY/movie-ticket-and-service-website/master/assets/images/%E5%BD%B1%E9%99%A2%E9%80%89%E6%8B%A9_UI.jpg
   [5]: https://raw.githubusercontent.com/HYPJUDY/movie-ticket-and-service-website/master/assets/images/%E5%9C%BA%E6%AC%A1%E9%80%89%E6%8B%A9_UI.jpg
   [6]: https://raw.githubusercontent.com/HYPJUDY/movie-ticket-and-service-website/master/assets/images/%E5%BA%A7%E4%BD%8D%E9%80%89%E6%8B%A9_UI.png
+  [7]: https://github.com/HYPJUDY/movie-ticket-and-service-website/blob/master/assets/images/Use_Case%E5%9B%BE.png
+  
