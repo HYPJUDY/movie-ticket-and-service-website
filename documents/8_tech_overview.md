@@ -89,18 +89,31 @@
 
 2.技术原型开发内容
 &ensp;2.1项目技术风险元素
+
 &ensp;&ensp;电影api中的key不能永久免费使用
+
 &ensp;&ensp;项目服务器只能由内网访问
+
 &ensp;&ensp;验证码识别
+
 &ensp;2.2开发方案
+
 &ensp;&ensp;1. 系统功能模块划分
+
 &ensp;&ensp;&ensp;网页界面功能设计
+
 &ensp;&ensp;&ensp;售票功能设计
+
 &ensp;&ensp;&ensp;查询功能设计
+
 &ensp;&ensp;&ensp;数据库管理功能设计
+
 &ensp;&ensp;2. 数据库设计
+
 &ensp;&ensp;&ensp;数据库概念设计
+
 &ensp;&ensp;&ensp;数据库物理设计
+
 &ensp;&ensp;3. 功能实现
 
 
