@@ -82,7 +82,7 @@
 	</tr>
 	<tr>
 		<th>3.3源代码管理</th>
-		<th>Gibhub</th>
+		<th>Github</th>
 		<th>	</th>
 	</tr>
 </table>
