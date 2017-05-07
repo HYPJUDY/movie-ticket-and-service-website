@@ -4,4 +4,8 @@
 ## Find Movie Domain Model
 ![Find movie domain model](../assets/images/find_movie_domain_model.jpg)
 ## Reservation Domain Model
+<<<<<<< HEAD
 ![Reservation domain model](../assets/images/reservation_domain_model.jpg)
+=======
+![Reservation domain model](../assets/images/reservation_domain_model.jpg)
+>>>>>>> origin/master
