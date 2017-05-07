@@ -6,17 +6,10 @@
 ## 用例主场景二：用户订票
 ![fuction_model2](../assets/images/SSD_reservation.png)
 
-## 用例主场景二：用户退票
+## 用例主场景三：用户退票
 ![fuction_model3](../assets/images/SSD_refund.png)
 
-## 操作契约如下：
- - 契约一：createNewAccount
-操作：createNewAccount(AccountID:string, Password:string, Email:string)；
-交叉引用：用例：用户注册账号
-前置条件：用户正在注册账号
-后置条件：创建了一个新账号，将该账号信息写入系统数据库中。
-
-##操作契约如下：
+##操作契约如下：  
  - 契约一：createNewAccount  
 操作：createNewAccount(AccountID:string, Password:string, Email:string)；  
 交叉引用：用例：用户注册账号  
