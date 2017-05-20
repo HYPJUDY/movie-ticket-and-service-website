@@ -1,7 +1,7 @@
 # Function Model
 非正式文档，至少包含3个用例主场景的系统顺序图，5个操作契约的后置条件
 ## 用例主场景一：用户注册和登录
-![fuction_model1](../assets/images/SSD_registration&Login.png)
+![fuction_model1](../assets/images/SSD_registration_Login.png)
 
 ## 用例主场景二：用户订票
 ![fuction_model2](../assets/images/SSD_reservation.png)
