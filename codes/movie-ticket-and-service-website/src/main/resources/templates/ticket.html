@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Movie Ticket and Service Website | Ticket</title>
+
+    <!-- for-mobile-apps -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Movie Ticket Booking Widget Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- //for-mobile-apps -->
+    <link href='//fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+
+    <link href="../static/css/ticket.css"
+          th:href="@{css/ticket.css}" rel="stylesheet" type="text/css" media="all" />
+    <link href="../static/css/bootstrap.css"
+          th:href="@{css/bootstrap.css}" rel='stylesheet' type='text/css' />
+    <link href="../static/css/style.css"
+          th:href="@{css/style.css}" rel="stylesheet" type="text/css" media="all" />
+
+    <script src="../static/js/jquery.min.js"
+            th:src="@{js/jquery.min.js}"></script>
+    <script src="../static/js/jquery.seat-charts.js"
+            th:src="@{js/jquery.seat-charts.js}"></script>
+
+</head>
+<body>
+<!-- header-section-starts -->
+<div class="full">
+    <div class="menu">
+        <ul>
+            <li><a href="index.html"><div class="hm"><i class="home1"></i><i class="home2"></i></div></a></li>
+            <li><a href="videos.html"><div class="video"><i class="videos"></i><i class="videos1"></i></div></a></li>
+            <li><a href="reviews.html"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
+            <li><a class="active" href="ticket.html"><div class="bk"><i class="booking"></i><i class="booking1"></i></div></a></li>
+            <li><a href="contact.html"><div class="cnt"><i class="contact"></i><i class="contact1"></i></div></a></li>
+        </ul>
+    </div>
+    <div class="main" style=" background: url(../images/ticket_banner.jpg) no-repeat center;">
+        <div class="error-content">
+            <div class="top-header span_top">
+                <!--/*/ <th:block th:include="fragments/utils :: header"></th:block> /*/-->
+            </div>
+            <div class="main_ticket">
+                <h2>Multiplex Theatre Showing Screen 1</h2>
+                <div class="demo">
+                    <div id="seat-map">
+                        <div class="front">SCREEN</div>
+                    </div>
+                    <div class="booking-details">
+                        <ul class="book-left">
+                            <li>Movie </li>
+                            <li>Time </li>
+                            <li>Tickets</li>
+                            <li>Total</li>
+                            <li>Seats :</li>
+                        </ul>
+                        <ul class="book-right">
+                            <li>: Gingerclown</li>
+                            <li>: April 3, 21:00</li>
+                            <li>: <span id="counter">0</span></li>
+                            <li>: <b><i>$</i><span id="total">0</span></b></li>
+                        </ul>
+                        <div class="clear"></div>
+                        <ul id="selected-seats" class="scrollbar scrollbar1"></ul>
+
+
+                        <button class="checkout-button">Book Now</button>
+                        <div id="legend"></div>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+
+                <script type="text/javascript">
+                    var price = 10; //price
+                    $(document).ready(function() {
+                        var $cart = $('#selected-seats'), //Sitting Area
+                            $counter = $('#counter'), //Votes
+                            $total = $('#total'); //Total money
+
+                        var sc = $('#seat-map').seatCharts({
+                            map: [  //Seating chart
+                                'aaaaaaaaaa',
+                                'aaaaaaaaaa',
+                                '__________',
+                                'aaaaaaaa__',
+                                'aaaaaaaaaa',
+                                'aaaaaaaaaa',
+                                'aaaaaaaaaa',
+                                'aaaaaaaaaa',
+                                'aaaaaaaaaa',
+                                '__aaaaaa__'
+                            ],
+                            naming : {
+                                top : false,
+                                getLabel : function (character, row, column) {
+                                    return column;
+                                }
+                            },
+                            legend : { //Definition legend
+                                node : $('#legend'),
+                                items : [
+                                    [ 'a', 'available',   'Available' ],
+                                    [ 'a', 'unavailable', 'Sold'],
+                                    [ 'a', 'selected', 'Selected']
+                                ]
+                            },
+                            click: function () { //Click event
+                                if (this.status() == 'available') { //optional seat
+                                    $('<li>Row'+(this.settings.row+1)+' Seat'+this.settings.label+'</li>')
+                                        .attr('id', 'cart-item-'+this.settings.id)
+                                        .data('seatId', this.settings.id)
+                                        .appendTo($cart);
+
+                                    $counter.text(sc.find('selected').length+1);
+                                    $total.text(recalculateTotal(sc)+price);
+
+                                    return 'selected';
+                                } else if (this.status() == 'selected') { //Checked
+                                    //Update Number
+                                    $counter.text(sc.find('selected').length-1);
+                                    //update totalnum
+                                    $total.text(recalculateTotal(sc)-price);
+
+                                    //Delete reservation
+                                    $('#cart-item-'+this.settings.id).remove();
+                                    //optional
+                                    return 'available';
+                                } else if (this.status() == 'unavailable') { //sold
+                                    return 'unavailable';
+                                } else {
+                                    return this.style();
+                                }
+                            }
+                        });
+                        //sold seat
+                        sc.get(['1_2', '4_4','4_5','6_6','6_7','8_5','8_6','8_7','8_8', '10_1', '10_2']).status('unavailable');
+
+                    });
+                    //sum total money
+                    function recalculateTotal(sc) {
+                        var total = 0;
+                        sc.find('selected').each(function () {
+                            total += price;
+                        });
+
+                        return total;
+                    }
+                </script>
+            </div>
+            <div class="footer">
+                <!--/*/ <th:block th:include="fragments/utils :: footer"></th:block> /*/-->
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<script src="../static/js/jquery.nicescroll.js"
+        th:src="@{js/jquery.nicescroll.js}"></script>
+<script src="../static/js/scripts.js"
+        th:src="@{js/scripts.js}"></script>
+
+</body>
+</html>
