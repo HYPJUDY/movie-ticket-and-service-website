@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${ title }"></title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script th:src="@{/js/jquery-1.11.1.min.js}"></script>
+    <!-- //js -->
+    <!-- for bootstrap working -->
+    <script th:src="@{/js/bootstrap.js}"> </script>
+    <!-- //for bootstrap working -->
+</head>
+	
+<body>
+<!-- header -->
+	<div class="header" th:include="fragment/header :: .header">
+	</div>
+<!--tips-->
+	<div class="banner-bottom1">
+		<h3>成功退出，<a th:href="@{/index}">返回首页</a></h3>
+	</div>
+
+<!--- footer --->
+	<div class="footer" th:include="fragment/footer :: .footer">
+	</div>
+	<div class="clear"> </div>
+<!--- //footer --->
+</body>
+</html>

@@ -1,0 +1,35 @@
+html,
+body {
+    height: 100%;
+}
+
+
+.container{
+	height: 100%;
+}
+
+.form-signin {
+    max-width: 300px;
+    margin: 18% auto 0;
+}
+
+.form-header {
+    margin-bottom: 20px;
+}
+.btn-block {
+    background-color:#2fd828;
+    border: 0px;
+
+}
+.btn-block:hover {
+    background-color:#2fd828;
+    border: 0px;
+
+}
+
+.register-tip {
+	text-align: center;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
