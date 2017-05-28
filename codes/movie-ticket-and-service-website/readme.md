@@ -26,8 +26,8 @@ Building a Spring Boot Web Application. Focus on front end.
 ### Log in & Sign up
 Yupan Huang, 2017/5/28
 Add log in/sign up buttons and pages. Remove Contact button and page.
-![log in demo](https://github.com/HYPJUDY/movie-ticket-and-service-website/blob/master/assets/demo/login-demo.jpg)
-![sign up demo](https://github.com/HYPJUDY/movie-ticket-and-service-website/blob/master/assets/demo/signup-demo.jpg)
+<img src="https://github.com/HYPJUDY/movie-ticket-and-service-website/raw/master/assets/demo/login-demo.jpg" style="width: 45%;" class="removed_alt changed">
+<img src="https://github.com/HYPJUDY/movie-ticket-and-service-website/raw/master/assets/demo/signup-demo.jpg" style="width: 45%;" class="removed_alt changed">
 
 
 ## Reference
