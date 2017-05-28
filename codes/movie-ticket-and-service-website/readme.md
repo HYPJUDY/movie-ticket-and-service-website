@@ -1,6 +1,6 @@
 # Iteration 1: Front End
 Yupan Huang, 2017/5/22
-![demo gif](https://github.com/HYPJUDY/movie-ticket-and-service-website/blob/master/assets/images/demo1.gif)
+![demo gif](https://github.com/HYPJUDY/movie-ticket-and-service-website/blob/master/assets/demo/demo1.gif)
 
 ## Tech
 Building a Spring Boot Web Application. Focus on front end.
@@ -21,6 +21,13 @@ Building a Spring Boot Web Application. Focus on front end.
 2. Download web templates [3] and [4].
 3. Serving web content with Spring MVC -- write htmls and controllers (no database now). Also need to combine two web templates. (Please refer to [1] and [2: Part 2&4])
 4. Including Thymeleaf fragments to make code neat and compact. (Please refer to [2: Part 4])
+
+## Update
+### Log in & Sign up
+Yupan Huang, 2017/5/28
+Add log in/sign up buttons and pages. Remove Contact button and page.
+![log in demo](https://github.com/HYPJUDY/movie-ticket-and-service-website/blob/master/assets/demo/login-demo.jpg)
+![sign up demo](https://github.com/HYPJUDY/movie-ticket-and-service-website/blob/master/assets/demo/signup-demo.jpg)
 
 
 ## Reference
