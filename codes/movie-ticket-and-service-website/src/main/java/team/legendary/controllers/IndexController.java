@@ -23,4 +23,14 @@ public class IndexController {
     String ticket() {
         return  "ticket";
     }
+
+    @RequestMapping("/login")
+    String login() {
+        return  "login";
+    }
+
+    @RequestMapping("/signup")
+    String signup() {
+        return  "signup";
+    }
 }
