@@ -30,6 +30,17 @@ Add log in/sign up buttons and pages. Remove Contact button and page.
 <img src="https://github.com/HYPJUDY/movie-ticket-and-service-website/raw/master/assets/demo/signup-demo.jpg" width="45%" />
 
 
+# Iteration 2: Database and authorization
+Xipeng Lin, 2017/5/29
+
+## Work
+Implement the authorization of the application and build database connected with jdbc.
+
+## What to do before running
+* create database named "movie_ticket" in mysql
+* create some essential tables with the sql statements in file "mysql_ddl.sql"
+* change the password in file "applicationContext.xml" into the one of your mysql root user
+
 ## Reference
 1. [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 2. Tutorial series -- SPRING BOOT WEB APPLICATION: [PART 1 - Spring Initializer](https://springframework.guru/spring-boot-web-application-part-1-spring-initializr/), [PART 2 - Using Thymeleaf](https://springframework.guru/spring-boot-web-application-part-2-using-thymeleaf/), [PART 3 - Spring Data JPA](https://springframework.guru/spring-boot-web-application-part-3-spring-data-jpa/), [PART 4 - Spring MVC](https://springframework.guru/spring-boot-web-application-part-4-spring-mvc/) and [PART 5 - Spring Security](https://springframework.guru/spring-boot-web-application-part-5-spring-security/).
