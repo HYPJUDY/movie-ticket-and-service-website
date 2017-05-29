@@ -30,11 +30,11 @@ Add log in/sign up buttons and pages. Remove Contact button and page.
 <img src="https://github.com/HYPJUDY/movie-ticket-and-service-website/raw/master/assets/demo/signup-demo.jpg" width="45%" />
 
 
-# Iteration 2: Front End
+# Iteration 2: Database and authorization
 Xipeng Lin, 2017/5/29
 
 ## Work
-Implement database and authorization of the application.
+Implement the authorization of the application and build database connected with jdbc.
 
 ## What to do before running
 * create database named "movie_ticket" in mysql
