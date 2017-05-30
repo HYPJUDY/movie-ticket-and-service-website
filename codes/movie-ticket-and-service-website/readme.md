@@ -2,6 +2,8 @@
 Yupan Huang, 2017/5/22
 ![demo gif](https://github.com/HYPJUDY/movie-ticket-and-service-website/blob/master/assets/demo/demo1.gif)
 
+For more details, read [this post](https://hypjudy.github.io/2017/05/30/spring-boot-web-application/) please.
+
 ## Tech
 Building a Spring Boot Web Application. Focus on front end.
 * Spring
@@ -14,7 +16,7 @@ Building a Spring Boot Web Application. Focus on front end.
 * [Maven 3.0+](https://maven.apache.org/download.cgi) or [Gradle 2.3+](http://www.gradle.org/downloads)
 * Import the code straight into your IDE:
     - [IntelliJ IDEA](https://spring.io/guides/gs/intellij-idea/)
-    - Eclipse
+    - Eclipse (Run as -> Maven build... -> Goals:"jetty:run")
 
 ## Approach
 1. Initialize a Spring Boot project with IntelliJ. Be sure to check "Web" and "Thymeleaf". (Please refer to [2: Part 1])
