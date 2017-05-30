@@ -8,25 +8,33 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.team.legendary.persistence.entity.Customer;
 import com.team.legendary.persistence.service.CustomerService;
 
+
 @Controller
-public class LoginController {
-	
+public class SignupController {
+
 	@Autowired
 	private CustomerService customerService;
-
-	@GetMapping("/login")
-    public String startLogin(@ModelAttribute("customer")Customer customer) {
-		return "login";
+	
+	@ModelAttribute("customer")
+	public Customer getCustomer() {
+		return new Customer();
+	}
+	
+	@GetMapping("/signup")
+    public String finishSignup(final Customer customer) {
+		System.out.println("signup...");
+        return "signup";
     }
 	
-	@PostMapping("/login")
-	public String loginSubmit(@ModelAttribute("customer")Customer customer) {
+	@PostMapping("/signup")
+	public String signupSubmit(@ModelAttribute("customer")Customer customer) {
 		try {
 			customerService.create(customer);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		return "index";
+		return "login";
 	}
+			
 }

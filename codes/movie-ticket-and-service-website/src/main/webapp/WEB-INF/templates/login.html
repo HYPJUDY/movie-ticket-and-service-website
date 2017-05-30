@@ -26,8 +26,8 @@
             <!---contact-->
             <div class="main-contact">
                 <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Email" required="required" />
+                    <form action="#" th:action="@{/login}" th:object="${login}" method="post">
+                        <input type="text" placeholder="Email" required="required"  />
                         <input type="password" placeholder="Password" required="required" />
                         <input type="submit" value="Log In"/>
                         <div class="clearfix"></div>
