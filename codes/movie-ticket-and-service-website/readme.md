@@ -35,6 +35,7 @@ Add log in/sign up buttons and pages. Remove Contact button and page.
 2017/5/20
 Navigate to index page after logging in.
 Navigate to login page after signing up.
+Reference: [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
 
 # Iteration 2: Database and authorization
 Xipeng Lin, 2017/5/29
