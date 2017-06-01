@@ -26,12 +26,18 @@
             <!---contact-->
             <div class="main-contact">
                 <div class="contact-form">
-                    <form action="#" th:action="@{/login}" th:object="${login}" method="post">
-                        <input type="text" placeholder="Email" required="required"  />
-                        <input type="password" placeholder="Password" required="required" />
-                        <input type="submit" value="Log In"/>
-                        <div class="clearfix"></div>
-                    </form>
+                	<form action="/index" th:object="${customer}" method="post" class="form-signin" role="form">
+        				
+        				<div class="form-group">
+            				<input  class="form-control" name="email" placeholder="UserName" required autofocus th:field="*{customerName}" />
+        				</div>
+        				<div class="form-group">
+            				<input type="password" class="form-control" name="password" placeholder="Password" required th:field="*{password}" />
+        				</div>
+        		
+        				<button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+    				</form>
+                   
                 </div>
             </div>
         </div>

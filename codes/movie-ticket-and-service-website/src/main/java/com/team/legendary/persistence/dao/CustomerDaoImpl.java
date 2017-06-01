@@ -49,7 +49,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		    new PreparedStatementCreator() {
 		        public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
 		            PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[] {"customerName"});
-		            ps.setString(1, temp.getName());	
+		            ps.setString(1, temp.getCustomerName());	
 		            ps.setString(2, temp.getPassword());
 		            return ps;
 		        }
@@ -63,7 +63,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
 			// TODO Auto-generated method stub
 			Customer customer = new Customer();
-			customer.setName(rs.getString("customerName"));
+			customer.setCustomerName(rs.getString("customerName"));
 			customer.setPassword(rs.getString("password"));
 			return customer;
 		}

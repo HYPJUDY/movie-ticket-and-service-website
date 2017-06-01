@@ -33,7 +33,7 @@ CREATE TABLE Role (
 
 CREATE TABLE Customer_Role (
     role_id int(11) not null,
-    customer_name char(30) not null
+    customerName char(30) not null
 );
 
 CREATE TABLE Permission(
