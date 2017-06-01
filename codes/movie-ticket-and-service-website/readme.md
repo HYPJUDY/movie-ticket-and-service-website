@@ -43,6 +43,8 @@ Xipeng Lin, 2017/5/29
 ## Work
 Implement the authorization of the application and build database connected with jdbc.
 
+Implement the login and register function completely.
+
 ## What to do before running
 * create database named "movie_ticket" in mysql
 * create some essential tables with the sql statements in file "mysql_ddl.sql"
