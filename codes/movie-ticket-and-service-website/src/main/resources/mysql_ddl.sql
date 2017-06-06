@@ -1,6 +1,8 @@
 --通过以下命令创建数据库
 
 ALTER DATABASE CHARACTER SET "utf8";
+ALTER TABLE Movie CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE Movie CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE TABLE Customer (
      customerName CHAR(30) NOT NULL,
      password char(30) not null
