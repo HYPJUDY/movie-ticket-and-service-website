@@ -694,7 +694,7 @@ h3.head {
 }
 .movie-pic {
 	float:left;
-	width:24%;
+	width:22%;
 	margin-right:3%;
 }
 .movie-pic img {
@@ -1293,7 +1293,7 @@ font-weight: 700;
 		padding-top:0.4em;
 	}
 	.movie-pic {
-		width: 28%;
+		width: 22%;
 	}
 	.review-info {
 		width: 69%;
@@ -1367,7 +1367,7 @@ font-weight: 700;
 		width: 67%;
 	}
 	.movie-pic {
-		width: 30%;
+		width: 25%;
 	}
 	.rtm, .wt {
 		width: 32%;
@@ -1923,7 +1923,7 @@ font-weight: 700;
 		overflow: hidden;
 	}
 	.movie-pic {
-		width: 34%;
+		width: 26%;
 	}
 	.review-info {
 		width: 63%;
@@ -2192,7 +2192,7 @@ font-weight: 700;
 		width: 63%;
 	}
 	.movie-pic {
-		width: 54%;
+		width: 50%;
 	}
 	p.rating {
 		font-size: 0.875em;

@@ -24,57 +24,46 @@
 				<!--/*/ <th:block th:include="fragments/utils :: header"></th:block> /*/-->
 			</div>
 			<div class="reviews-section">
-				<h3 class="head">Movie Reviews</h3>
+			    <!-- pop-up-box -->
+				<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+				<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+				<script>
+                    $(document).ready(function() {
+                        $('.popup-with-zoom-anim').magnificPopup({
+                            type: 'inline',
+                            fixedContentPos: false,
+                            fixedBgPos: true,
+                            overflowY: 'auto',
+                            closeBtnInside: true,
+                            preloader: false,
+                            midClick: true,
+                            removalDelay: 300,
+                            mainClass: 'my-mfp-zoom-in'
+                        });
+                    });
+				</script>
+
+				<!--//pop-up-box -->
+				<h3 class="head">Movie on the Theater</h3>
 					<div class="col-md-9 reviews-grids">
 						<div class="review">
 							<div class="movie-pic">
 								<a href="single.html"><img src="images/r4.jpg" alt="" /></a>
 							</div>
 							<div class="review-info">
-								<a class="span" href="single.html">Lorem  <i>Movie Review</i></a>
+								<a class="span" href="single.html">Interstellar  <i>Movie Review</i></a>
 								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
-								<p class="ratingview">Critic's Rating:</p>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<p class="ratingview">
-								&nbsp;3.5/5  
-								</p>
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<div class="rating c-rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 	
 								<p class="ratingview c-rating">								
 								&nbsp; 3.3/5</p>
 								<div class="clearfix"></div>
 								<div class="yrw">
-									<div class="dropdown-button">           			
-										<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
-										<option value="0">Your rating</option>	
-										<option value="1">1.Poor</option>
-										<option value="2">1.5(Below average)</option>
-										<option value="3">2.Average</option>
-										<option value="4">2.5(Above average)</option>
-										<option value="5">3.Watchable</option>
-										<option value="6">3.5(Good)</option>
-										<option value="7">4.5(Very good)</option>
-										<option value="8">5.Outstanding</option>
-									  </select>
-									</div>
 									<div class="rtm text-center">
-										<a href="#">REVIEW THIS MOVIE</a>
+										<a href="ticket">BOOK NOW</a>
 									</div>
 									<div class="wt text-center">
-										<a href="#">WATCH THIS TRAILER</a>
+										<a href="videos.html#small-dialog">WATCH THIS TRAILER</a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -90,50 +79,19 @@
 								<a href="single.html"><img src="images/r6.jpg" alt="" /></a>
 							</div>
 							<div class="review-info">
-								<a class="span" href="single.html">Lorem  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
-								<p class="ratingview">Critic's Rating:</p>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<p class="ratingview">
-								&nbsp;3.5/5  
-								</p>
+								<a class="span" href="single.html">Big Hero6  <i>Movie Review</i></a>
+								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<div class="rating c-rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 	
 								<p class="ratingview c-rating">								
 								&nbsp; 3.3/5</p>
 								<div class="clearfix"></div>
 								<div class="yrw">
-									<div class="dropdown-button">           			
-										<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
-										<option value="0">Your rating</option>	
-										<option value="1">1.Poor</option>
-										<option value="2">1.5(Below average)</option>
-										<option value="3">2.Average</option>
-										<option value="4">2.5(Above average)</option>
-										<option value="5">3.Watchable</option>
-										<option value="6">3.5(Good)</option>
-										<option value="7">4.5(Very good)</option>
-										<option value="8">5.Outstanding</option>
-									  </select>
-									</div>
 									<div class="rtm text-center">
-										<a href="#">REVIEW THIS MOVIE</a>
+										<a href="ticket">BOOK NOW</a>
 									</div>
 									<div class="wt text-center">
-										<a href="#">WATCH THIS TRAILER</a>
+										<a href="videos.html#small-dialog">WATCH THIS TRAILER</a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -149,50 +107,19 @@
 								<a href="single.html"><img src="images/r5.jpg" alt="" /></a>
 							</div>
 							<div class="review-info">
-								<a class="span" href="single.html">Lorem  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
-								<p class="ratingview">Critic's Rating:</p>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<p class="ratingview">
-								&nbsp;3.5/5  
-								</p>
+								<a class="span" href="single.html">Interstellar  <i>Movie Review</i></a>
+								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<div class="rating c-rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 	
 								<p class="ratingview c-rating">								
 								&nbsp; 3.3/5</p>
 								<div class="clearfix"></div>
 								<div class="yrw">
-									<div class="dropdown-button">           			
-										<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
-										<option value="0">Your rating</option>	
-										<option value="1">1.Poor</option>
-										<option value="2">1.5(Below average)</option>
-										<option value="3">2.Average</option>
-										<option value="4">2.5(Above average)</option>
-										<option value="5">3.Watchable</option>
-										<option value="6">3.5(Good)</option>
-										<option value="7">4.5(Very good)</option>
-										<option value="8">5.Outstanding</option>
-									  </select>
-									</div>
 									<div class="rtm text-center">
-										<a href="#">REVIEW THIS MOVIE</a>
+										<a href="ticket">BOOK NOW</a>
 									</div>
 									<div class="wt text-center">
-										<a href="#">WATCH THIS TRAILER</a>
+										<a href="videos.html#small-dialog">WATCH THIS TRAILER</a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -208,50 +135,19 @@
 								<a href="single.html"><img src="images/r1.jpg" alt="" /></a>
 							</div>
 							<div class="review-info">
-								<a class="span" href="single.html">Lorem  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
-								<p class="ratingview">Critic's Rating:</p>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<p class="ratingview">
-								&nbsp;3.5/5  
-								</p>
+								<a class="span" href="single.html">Interstellar  <i>Movie Review</i></a>
+								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<div class="rating c-rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 	
 								<p class="ratingview c-rating">								
 								&nbsp; 3.3/5</p>
 								<div class="clearfix"></div>
 								<div class="yrw">
-									<div class="dropdown-button">           			
-										<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
-										<option value="0">Your rating</option>	
-										<option value="1">1.Poor</option>
-										<option value="2">1.5(Below average)</option>
-										<option value="3">2.Average</option>
-										<option value="4">2.5(Above average)</option>
-										<option value="5">3.Watchable</option>
-										<option value="6">3.5(Good)</option>
-										<option value="7">4.5(Very good)</option>
-										<option value="8">5.Outstanding</option>
-									  </select>
-									</div>
 									<div class="rtm text-center">
-										<a href="#">REVIEW THIS MOVIE</a>
+										<a href="ticket">BOOK NOW</a>
 									</div>
 									<div class="wt text-center">
-										<a href="#">WATCH THIS TRAILER</a>
+										<a href="videos.html#small-dialog">WATCH THIS TRAILER</a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -267,50 +163,19 @@
 								<a href="single.html"><img src="images/r3.jpg" alt="" /></a>
 							</div>
 							<div class="review-info">
-								<a class="span" href="single.html">Lorem  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
-								<p class="ratingview">Critic's Rating:</p>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<p class="ratingview">
-								&nbsp;3.5/5  
-								</p>
+								<a class="span" href="single.html">Interstellar  <i>Movie Review</i></a>
+								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 	
-								<p class="ratingview">								
+								<p class="ratingview c-rating">								
 								&nbsp; 3.3/5</p>
 								<div class="clearfix"></div>
 								<div class="yrw">
-									<div class="dropdown-button">           			
-										<select class="dropdown" tabindex="9" data-settings='{"wrapperClass":"flat"}'>
-										<option value="0">Your rating</option>	
-										<option value="1">1.Poor</option>
-										<option value="2">1.5(Below average)</option>
-										<option value="3">2.Average</option>
-										<option value="4">2.5(Above average)</option>
-										<option value="5">3.Watchable</option>
-										<option value="6">3.5(Good)</option>
-										<option value="7">4.5(Very good)</option>
-										<option value="8">5.Outstanding</option>
-									  </select>
-									</div>
 									<div class="rtm text-center">
-										<a href="#">REVIEW THIS MOVIE</a>
+										<a href="ticket">BOOK NOW</a>
 									</div>
 									<div class="wt text-center">
-										<a href="#">WATCH THIS TRAILER</a>
+										<a href="videos.html#small-dialog">WATCH THIS TRAILER</a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -361,7 +226,7 @@
 									<a href="single.html"><img src="images/f6.jpg" alt="" /></a>
 								</li>
 								<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
+									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
 								
 								</li>
 								<div class="clearfix"></div>
@@ -371,7 +236,7 @@
 									<a href="single.html"><img src="images/f5.jpg" alt="" /></a>
 								</li>
 									<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
+									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
 							
 								</li>
 								<div class="clearfix"></div>
@@ -381,7 +246,7 @@
 									<a href="single.html"><img src="images/f3.jpg" alt="" /></a>
 								</li>
 								<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
+									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
 								
 								</li>
 								<div class="clearfix"></div>
@@ -391,7 +256,7 @@
 									<a href="single.html"><img src="images/f4.jpg" alt="" /></a>
 								</li>
 								<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
+									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
 								
 								</li>
 								<div class="clearfix"></div>
@@ -401,7 +266,7 @@
 									<a href="single.html"><img src="images/f2.jpg" alt="" /></a>
 								</li>
 								<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
+									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
 							
 								</li>
 								<div class="clearfix"></div>
@@ -411,7 +276,7 @@
 									<a href="single.html"><img src="images/f1.jpg" alt="" /></a>
 								</li>
 								<li>
-									<a href="single.html">Watch ‘Bombay Velvet’ trailer during WC match</a>
+									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
 								
 								</li>
 								<div class="clearfix"></div>
