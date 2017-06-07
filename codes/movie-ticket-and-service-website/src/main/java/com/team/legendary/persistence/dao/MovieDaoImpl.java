@@ -9,6 +9,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import javax.sql.DataSource;
+
+import org.omg.IOP.TAG_MULTIPLE_COMPONENTS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -42,6 +44,11 @@ public class MovieDaoImpl implements MovieDao {
 			movie.setPrice(rs.getDouble("price"));
 			movie.setDescrition(rs.getString("description"));
 			movie.setPoster(rs.getString("moviePoster"));
+			movie.setAvgRating(rs.getDouble("movieAvgRating"));
+			movie.setCast(rs.getString("movieCast"));
+			movie.setDirection(rs.getString("movieDirection"));
+			movie.setGenre(rs.getString("movieGenre"));
+			movie.setDuration(rs.getInt("movieDuration"));
 			return movie;
 		}
 
@@ -59,7 +66,7 @@ public class MovieDaoImpl implements MovieDao {
 	}
 
 	public void create(Movie entity) {
-		final String INSERT_SQL = "insert into Movie (movieName, price, description) values(?,?,?,?)";
+		final String INSERT_SQL = "insert into Movie (movieName, price, description, moviePoster, movieAvgRating, movieCast, movieDirection, movieGenre, movieDuration) values(?,?,?,?,?,?,?,?,?)";
 		final Movie temp = entity;
 
 		System.out.println("-------------------------Insert counter!");
@@ -72,6 +79,11 @@ public class MovieDaoImpl implements MovieDao {
 						ps.setDouble(2, temp.getPrice());
 						ps.setString(3, temp.getDescrition());
 						ps.setString(4, temp.getPoster());
+						ps.setDouble(5, temp.getAvgRating());
+						ps.setString(6, temp.getCast());
+						ps.setString(7, temp.getDirection());
+						ps.setString(8, temp.getGenre());
+						ps.setInt(9, temp.getDuration());
 						return ps;
 					}
 				},
