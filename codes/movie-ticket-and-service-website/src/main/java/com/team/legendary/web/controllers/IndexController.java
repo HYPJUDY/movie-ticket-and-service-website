@@ -19,19 +19,14 @@ import com.team.legendary.persistence.service.MovieService;
 @Controller
 public class IndexController {
 
-//    @RequestMapping("/")
-//    String root() {
-//        return  "index";
-//    }
-
-//    @RequestMapping("/index")
-//    String index() {
-//        return  "index";
-//    }
-//
     @RequestMapping("/ticket")
     String ticket() {
         return  "ticket";
+    }
+    
+    @RequestMapping("/reviews")
+    String review() {
+        return  "reviews";
     }
 
 //    @RequestMapping("/login")
