@@ -13,7 +13,7 @@ CREATE TABLE Movie(
     price double not null,
     description char(100) not null,
     poster char(30) not null,
-    avgRating double not null,
+    avg_rating double not null,
     cast char(100) not null,
     direction char(30) not null,
     genre char(30) not null,
