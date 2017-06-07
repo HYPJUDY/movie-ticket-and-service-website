@@ -1,34 +1,34 @@
---通过以下命令创建数据库
+﻿--通过以下命令创建数据库
 
 ALTER DATABASE CHARACTER SET "utf8";
 CREATE TABLE Customer (
-     customerName CHAR(30) NOT NULL,
+     customer_name CHAR(30) NOT NULL,
      password char(30) not null
 
 );
 
 CREATE TABLE Movie(
     id int not null auto_increment,
-    movieName char(30) not null,
+    movie_name char(30) not null,
     price double not null,
     description char(100) not null,
-    moviePoster char(30) not null,
-    movieAvgRating double not null,
-    movieCast char(100) not null,
-    movieDirection char(30) not null,
-    movieGenre char(30) not null,
-    movieDuration int not null,
+    poster char(30) not null,
+    avgRating double not null,
+    cast char(100) not null,
+    direction char(30) not null,
+    genre char(30) not null,
+    duration int not null,
     primary key (id)
 );
 
 CREATE TABLE OrderTable(
     id int not null auto_increment,
-    customerName char(30),
+    customer_name char(30),
     expenditure double not null,
-    movieName char(30) not null,
-    movieSeating char(30) not null,
-    movieTime char(30) not null,
-    ticketCount int not null,
+    movie_name char(30) not null,
+    seating char(30) not null,
+    movie_time char(30) not null,
+    ticket_count int not null,
     primary key(id)
 );
 
@@ -59,5 +59,3 @@ INSERT INTO Role VALUES(0, "CustomerVIP");
 INSERT INTO Permission VALUES(0, "Dischange");
 INSERT INTO Role_Permission VALUES(0, 0);
 INSERT INTO Customer_Role VALUES(0, "linxp");
-
-INSERT INTO Movie VALUES(1, "蜘蛛侠", 32.0, "spiderman come back", "r2.jpg");
