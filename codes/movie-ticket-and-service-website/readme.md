@@ -88,7 +88,9 @@ Implement the login and register function completely.
 What to do before running
 * drop the previous movie and ordertable tables in your mysql database with the command `drop table movie;` and `drop table ordertable;`
 * create new tables with the SQL statement in the updated .sql file.
- 
+
+## Rename some property of the tabels in our database
+* Change to lowercase letters only
 
 # Reference
 1. [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
