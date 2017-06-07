@@ -20,7 +20,7 @@ public class Movie implements Serializable {
     @Column(name = "id")
     private Integer id = null;
 
-    @Column(name = "movieName")
+    @Column(name = "movie_name")
     private String movieName = null;
 
     @Column(name = "price")
@@ -29,22 +29,22 @@ public class Movie implements Serializable {
     @Column(name="description")
     private String description = null;
 
-    @Column(name="moviePoster")
+    @Column(name="poster")
     private String moviePoster = null;
     
-    @Column(name="movieAvgRating")
+    @Column(name="avg_rating")
     private Double movieAvgRating = null;
     
-    @Column(name="movieCast")
+    @Column(name="cast")
     private String movieCast = null;
     
-    @Column(name="movieDirection")
+    @Column(name="direction")
     private String movieDirection = null;
     
-    @Column(name="movieGenre")
+    @Column(name="genre")
     private String movieGenre = null;
     
-    @Column(name="movieDuration")
+    @Column(name="duration")
     private Integer movieDuration = null;
 
 	/*@Column(name = "instock")
