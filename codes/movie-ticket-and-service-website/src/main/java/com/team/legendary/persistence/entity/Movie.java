@@ -31,6 +31,21 @@ public class Movie implements Serializable {
 
     @Column(name="moviePoster")
     private String moviePoster = null;
+    
+    @Column(name="movieAvgRating")
+    private Double movieAvgRating = null;
+    
+    @Column(name="movieCast")
+    private String movieCast = null;
+    
+    @Column(name="movieDirection")
+    private String movieDirection = null;
+    
+    @Column(name="movieGenre")
+    private String movieGenre = null;
+    
+    @Column(name="movieDuration")
+    private Integer movieDuration = null;
 
 	/*@Column(name = "instock")
     private boolean inStock = false;*/
@@ -38,13 +53,20 @@ public class Movie implements Serializable {
     public Movie() {
         super();
     }
-    public Movie(final Integer id, final String movieName, final Double price, final String description, final String moviePoster) {
+    public Movie(final Integer id, final String movieName, final Double price, final String description, final String moviePoster,
+    		final Double movieAvgRating, final String movieCast, final String movieDirection, final String movieGenre, final Integer movieDuration) {
         super();
         this.id = id;
         this.movieName = movieName;
         this.price = price;
         this.description = description;
         this.moviePoster = moviePoster;
+        
+        this.movieAvgRating = movieAvgRating;
+        this.movieCast = movieCast;
+        this.movieDirection = movieDirection;
+        this.movieGenre = movieGenre;
+        this.movieDuration = movieDuration;
     }
 
 
@@ -100,6 +122,46 @@ public class Movie implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+    
+    public Double getAvgRating() {
+        return this.movieAvgRating;
+    }
+
+    public void setAvgRating(Double movieAvgRating) {
+        this.movieAvgRating = movieAvgRating;
+    }
+    
+    public String getCast() {
+        return this.movieCast;
+    }
+
+    public void setCast(String description) {
+        this.description = description;
+    }
+    
+    public String getDirection() {
+        return this.movieDirection;
+    }
+
+    public void setDirection(String movieDirection) {
+        this.movieDirection = movieDirection;
+    }
+    
+    public String getGenre() {
+        return this.movieGenre;
+    }
+
+    public void setGenre(String movieGenre) {
+        this.movieGenre = movieGenre;
+    }
+    
+    public Integer getDuration() {
+        return this.movieDuration;
+    }
+
+    public void setDuration(Integer movieDuration) {
+        this.movieDuration = movieDuration;
     }
 }
 
