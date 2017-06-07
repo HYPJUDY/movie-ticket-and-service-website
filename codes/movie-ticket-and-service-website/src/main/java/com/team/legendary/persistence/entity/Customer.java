@@ -16,7 +16,7 @@ public class Customer implements Serializable {
 	private static final long serialVersionUID = 1L;
 
     @Id
-	@Column(name = "customerName")
+	@Column(name = "customer_name")
     private String customerName = null;
 	
 	@Column(name="password")
