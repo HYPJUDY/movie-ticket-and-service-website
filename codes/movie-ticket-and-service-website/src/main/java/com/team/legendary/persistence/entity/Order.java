@@ -21,22 +21,22 @@ public class Order implements Serializable {
     @Column(name = "id")
     private Integer id = null;
 	
-	@Column(name = "customerName")
+	@Column(name = "customer_name")
 	private String customerName = null;
 	
 	@Column(name = "expenditure")
 	private Double expenditure = null;
 	
-	@Column(name = "movieName")
+	@Column(name = "movie_name")
 	private String movieName = null;
 	
-	@Column(name = "movieSeating")
+	@Column(name = "seating")
 	private String movieSeating = null;
 	
-	@Column(name = "movieTime")
+	@Column(name = "movie_time")
 	private String movieTime = null;
 	
-	@Column(name = "ticketCount")
+	@Column(name = "ticket_count")
 	private Integer ticketCount = null;
 	
 	public Order() {
