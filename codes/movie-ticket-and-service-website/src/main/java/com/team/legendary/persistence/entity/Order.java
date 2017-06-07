@@ -1,6 +1,8 @@
 package com.team.legendary.persistence.entity;
 
 import java.io.Serializable;
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,16 +33,25 @@ public class Order implements Serializable {
 	@Column(name = "movieSeating")
 	private String movieSeating = null;
 	
+	@Column(name = "movieTime")
+	private String movieTime = null;
+	
+	@Column(name = "ticketCount")
+	private Integer ticketCount = null;
+	
 	public Order() {
         super();
     }
 
-    public Order(final Integer id, final String customerName, final Double expenditure, final String movieName, final String movieSeating) {
+    public Order(final Integer id, final String customerName, final Double expenditure,
+    		final String movieName, final String movieSeating, final String movieTime, final Integer ticketCount) {
 		this.id = id;
     	this.customerName = customerName;
 		this.expenditure = expenditure;
 		this.movieName = movieName;
 		this.movieSeating = movieSeating;
+		this.movieTime = movieTime;
+		this.ticketCount = ticketCount;
 	}
 	
     public Integer getId() {
@@ -82,4 +93,18 @@ public class Order implements Serializable {
 		return this.movieSeating;
 	}
     
+    public void setMovieTime(String movieTime) {
+		this.movieTime = movieTime;
+	}
+    
+    public String getMovieTime() {
+		return this.movieTime;
+	}
+    
+    public Integer getTicketCount() {
+        return this.ticketCount;
+    }
+    public void setTicketCount(final Integer ticketCount) {
+        this.ticketCount = ticketCount;
+    }
 }
