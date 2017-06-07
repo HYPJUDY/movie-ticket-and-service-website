@@ -228,6 +228,19 @@ span.seatCharts-legendDescription {
     line-height: 2.2em;
     font-weight:normal;
 }
+.ticket-details {
+	border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em;
+    background: #f9f7f7;
+}
+ul.ticket-left {
+    float: left;
+    margin-right: 1em;
+}
+ul.ticket-right {
+    float: left;
+}
 ul.book-left {
     float: left;
     width: 35%;
@@ -235,6 +248,18 @@ ul.book-left {
 ul.book-right {
     float: right;
     width: 63%;
+}
+ul.ticket-left li {
+    font-size: 16px;
+    font-weight: 600;
+    color: #D88A04;
+    line-height: 1.9em;
+}
+ul.ticket-right li {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    line-height: 1.9em;
 }
 ul.book-left li {
     font-size: 16px;
@@ -433,6 +458,9 @@ ul.book-right li {
     }
     .main_ticket {
         margin: 28px auto;
+    }
+    ul.ticket-right li ,ul.ticket-left li {
+        font-size: 14px;
     }
     ul.book-right li ,ul.book-left li {
         font-size: 14px;

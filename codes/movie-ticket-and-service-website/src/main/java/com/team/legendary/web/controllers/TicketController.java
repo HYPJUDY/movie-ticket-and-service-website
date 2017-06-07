@@ -44,4 +44,9 @@ public class TicketController {
 	public String orderDetail(@PathVariable("orderId")String orderId) {
 		return	"ticket";
 	}
+	
+	@RequestMapping("/ticket_success")
+	public String ticket_success() {
+        return  "ticket_success";
+    }
 }

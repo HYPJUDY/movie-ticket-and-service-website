@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Movie Ticket and Service Website | Ticket</title>
+
+    <!-- for-mobile-apps -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Movie Ticket Booking Widget Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- //for-mobile-apps -->
+    <link href='//fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+
+    <link href="../static/css/ticket.css"
+          th:href="@{css/ticket.css}" rel="stylesheet" type="text/css" media="all" />
+    <link href="../static/css/bootstrap.css"
+          th:href="@{css/bootstrap.css}" rel='stylesheet' type='text/css' />
+    <link href="../static/css/style.css"
+          th:href="@{css/style.css}" rel="stylesheet" type="text/css" media="all" />
+
+    <script src="../static/js/jquery.min.js"
+            th:src="@{js/jquery.min.js}"></script>
+    <script src="../static/js/jquery.seat-charts.js"
+            th:src="@{js/jquery.seat-charts.js}"></script>
+
+</head>
+<body>
+<!-- header-section-starts -->
+<div class="full">
+    <div class="menu">
+        <ul>
+            <li><a href="index.html"><div class="hm"><i class="home1"></i><i class="home2"></i></div></a></li>
+            <li><a href="videos.html"><div class="video"><i class="videos"></i><i class="videos1"></i></div></a></li>
+            <li><a href="reviews.html"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
+            <li><a class="active" href="ticket.html"><div class="bk"><i class="booking"></i><i class="booking1"></i></div></a></li>
+        </ul>
+    </div>
+    <div class="main" style=" background: url(../images/ticket_banner.jpg) no-repeat center;">
+        <div class="error-content">
+            <div class="top-header span_top">
+                <!--/*/ <th:block th:include="fragments/loginState :: header_loginState"></th:block> /*/-->
+            </div>
+            <div class="main_ticket">
+                <h2>Ticket Detail</h2>
+                <div>
+                    <p>You have successfully booked the following ticket(s).</p>
+                    <div class="ticket-details">
+                        <ul class="ticket-left">
+                            <li>Movie: </li>
+                            <li>Time: </li>
+                            <li>Tickets: </li>
+                            <li>Total: </li>
+                            <li>Seats: </li>
+                        </ul>
+                        <ul class="ticket-right">
+                            <li>Gingerclown</li>
+                            <li>April 3, 21:00</li>
+                            <li><span>0</span></li>
+                            <li><b><i>$</i><span>0</span></b></li>
+                            <li>Row6 Seat4, Row6 Seat5</li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+                <!--/*/ <th:block th:include="fragments/utils :: footer"></th:block> /*/-->
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<script src="../static/js/jquery.nicescroll.js"
+        th:src="@{js/jquery.nicescroll.js}"></script>
+<script src="../static/js/scripts.js"
+        th:src="@{js/scripts.js}"></script>
+
+</body>
+</html>

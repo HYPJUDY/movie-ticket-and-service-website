@@ -38,6 +38,12 @@ label{
 	margin:0;
 }
 /*-----start-header----*/
+.greeting {
+	font-size: 1.2em;
+    font-weight: 600;
+    color: #e0b739;
+}
+
 .full {	
 	border-left: 5px solid #2b2b2b;
 }
