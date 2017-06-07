@@ -33,6 +33,11 @@ public class IndexController {
     String single() {
         return  "single";
     }
+    
+    @RequestMapping("/ticket_success")
+    String ticket_success() {
+        return  "ticket_success";
+    }
 
 //    @RequestMapping("/login")
 //    String login() {
