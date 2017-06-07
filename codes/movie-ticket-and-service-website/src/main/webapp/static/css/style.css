@@ -529,7 +529,7 @@ i.book {
 }
 .footer {
 	background:#f3f3f3;
-	padding:4em 3em;
+	padding:2em 2em;
 }
 .footer h6 {
 	color:#6F6F6F;
@@ -540,7 +540,7 @@ p.claim {
 	color: #b0b0b0;
 	font-size: 0.95em;
 	font-weight: 400;
-	width: 35%;
+	width: 55%;
 	margin: 10px 0;
 }
 .footer a {
@@ -1385,7 +1385,7 @@ font-weight: 700;
 }
 @media screen and (max-width: 1280px) {
 	.footer {
-		padding: 3em 2em;
+		padding: 1em 1em;
 	}
 	.news-left-grid h2 {
 		font-size: 2.5em;	
@@ -1626,11 +1626,11 @@ font-weight: 700;
 }
 @media screen and (max-width: 800px) {
 	p.claim {
-		width: 80%;
+		width: 90%;
 		margin: 8px 0;
 	}
 	.footer {
-		padding: 2em 1em;
+		padding: 0.5em 0.5em;
 	}
 	.copyright {
 		margin-top: 1.5em;
@@ -1806,7 +1806,7 @@ font-weight: 700;
 
 @media screen and (max-width: 640px) {
 	p.claim {
-		width: 85%;
+		width: 95%;
 		margin: 6px 0;
 		font-size: 0.9em;
 	}
