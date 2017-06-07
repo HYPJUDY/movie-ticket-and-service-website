@@ -35,20 +35,20 @@ public class CustomerDaoImpl implements CustomerDao {
 	}
 
 	public Customer findOne(String name) {
-		List<Customer> customers = this.jdbcTemplate.query("select * from Customer where customerName=" + name, new CustomerMapper());
+		List<Customer> customers = this.jdbcTemplate.query("select * from Customer where customer_name=" + name, new CustomerMapper());
     	if (customers.isEmpty()) return null;
     	return customers.get(0);
 	}
 
 	public void create(Customer entity) {
-		final String INSERT_SQL = "insert into Customer (customerName,password) values(?,?)";
+		final String INSERT_SQL = "insert into Customer (customer_name,password) values(?,?)";
     	final Customer temp = entity;
     	
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		this.jdbcTemplate.update(
 		    new PreparedStatementCreator() {
 		        public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-		            PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[] {"customerName"});
+		            PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[] {"customer_name"});
 		            ps.setString(1, temp.getCustomerName());	
 		            ps.setString(2, temp.getPassword());
 		            return ps;
