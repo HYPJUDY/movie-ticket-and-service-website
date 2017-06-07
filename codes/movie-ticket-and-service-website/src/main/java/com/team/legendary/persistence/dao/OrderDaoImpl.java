@@ -40,12 +40,12 @@ public class OrderDaoImpl implements OrderDao {
 			// TODO Auto-generated method stub
 			Order order = new Order();
 			order.setId(rs.getInt("id"));
-			order.setCustomerName(rs.getString("customerName"));
+			order.setCustomerName(rs.getString("customer_name"));
 			order.setExpenditure(rs.getDouble("expenditure"));
-			order.setMovieName(rs.getString("movieName"));
-			order.setMovieSeating(rs.getString("movieSeating"));
-			order.setMovieTime(rs.getString("movieTime"));
-			order.setTicketCount(rs.getInt("ticketCount"));
+			order.setMovieName(rs.getString("movie_name"));
+			order.setMovieSeating(rs.getString("seating"));
+			order.setMovieTime(rs.getString("movie_time"));
+			order.setTicketCount(rs.getInt("ticket_count"));
 			return order;
 		}
     	
@@ -63,7 +63,7 @@ public class OrderDaoImpl implements OrderDao {
 	}
 
 	public void create(Order entity) {
-		final String INSERT_SQL = "insert into OrderTable (customerName, expenditure, movieName, movieSeating, movieTime, ticketCount) values(?,?,?,?,?,?)";
+		final String INSERT_SQL = "insert into OrderTable (customer_name, expenditure, movie_name, seating, movie_time, ticket_count) values(?,?,?,?,?,?)";
     	final Order temp = entity;
     	
 		KeyHolder keyHolder = new GeneratedKeyHolder();
