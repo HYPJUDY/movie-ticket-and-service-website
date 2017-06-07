@@ -28,6 +28,11 @@ public class IndexController {
     String review() {
         return  "reviews";
     }
+    
+    @RequestMapping("/single")
+    String single() {
+        return  "single";
+    }
 
 //    @RequestMapping("/login")
 //    String login() {
