@@ -20,7 +20,7 @@ The following instruction provide you one way to run and test the code especiall
    You can change the password value to one of your MySQL root user's passwords. Or config the default password in MySQL:
    * Log in as root user: `mysql -u root -p`. The default password is empty (directly press `Enter` key).
    * Change the password to `root`: `mysql> set password for root@localhost = password('root');`
-
+   Attention: Between line 18-22, comment/uncomment lines according to your system.
 4. Create database (`mysql> CREATE DATABASE movie_ticket;`) and use database (`mysql> use movie_ticket;`).
 5. Create tables and insert some values by copy all contents in `/movie-ticket-and-service-website/src/main/resources/mysql_ddl.sql` to `mysql>` command line. (If you have error in chinese characters decoding, plese refer to [Convert to UTF-8](https://stackoverflow.com/questions/6115612/how-to-convert-an-entire-mysql-database-characterset-and-collation-to-utf-8))
 6. Run `movie-ticket-and-service-website` application in Eclipse.
