@@ -86,7 +86,7 @@ Implement the login and register function completely.
 
 ### Update movie class and order class
 What to do before running
-* drop the previous movie and ordertable tables in your mysql database with the command "drop table movie/ordertable"
+* drop the previous movie and ordertable tables in your mysql database with the command `drop table movie;` and `drop table ordertable;`
 * create new tables with the SQL statement in the updated .sql file.
  
 
