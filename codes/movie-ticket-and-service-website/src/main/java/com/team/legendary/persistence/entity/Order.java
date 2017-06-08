@@ -22,22 +22,22 @@ public class Order implements Serializable {
     private Integer id = null;
 	
 	@Column(name = "customer_name")
-	private String customerName = null;
+	private String customer_name = null;
 	
 	@Column(name = "expenditure")
 	private Double expenditure = null;
 	
-	@Column(name = "movie_name")
-	private String movieName = null;
+	@Column(name = "name")
+	private String name = null;
 	
 	@Column(name = "seating")
-	private String movieSeating = null;
+	private String seating = null;
 	
-	@Column(name = "movie_time")
-	private String movieTime = null;
+	@Column(name = "play_time")
+	private String play_time = null;
 	
 	@Column(name = "ticket_count")
-	private Integer ticketCount = null;
+	private Integer ticket_count = null;
 	
 	public Order() {
         super();
@@ -46,12 +46,12 @@ public class Order implements Serializable {
     public Order(final Integer id, final String customerName, final Double expenditure,
     		final String movieName, final String movieSeating, final String movieTime, final Integer ticketCount) {
 		this.id = id;
-    	this.customerName = customerName;
+    	this.customer_name = customerName;
 		this.expenditure = expenditure;
-		this.movieName = movieName;
-		this.movieSeating = movieSeating;
-		this.movieTime = movieTime;
-		this.ticketCount = ticketCount;
+		this.name = movieName;
+		this.seating = movieSeating;
+		this.play_time = movieTime;
+		this.ticket_count = ticketCount;
 	}
 	
     public Integer getId() {
@@ -70,41 +70,41 @@ public class Order implements Serializable {
 	}
     
     public void setCustomerName(String customerName) {
-		this.customerName = customerName;
+		this.customer_name = customerName;
 	}
     
     public String getCustomerName() {
-		return this.customerName;
+		return this.customer_name;
 	}
     
-    public void setMovieName(String movieName) {
-		this.movieName = movieName;
+    public void setMovieName(String name) {
+		this.name = name;
 	}
     
     public String getMovieName() {
-		return this.movieName;
+		return this.name;
 	}
     
     public void setMovieSeating (String movieSeating) {
-		this.movieSeating = movieSeating;
+		this.seating = movieSeating;
 	}
     
     public String getMovieSeating() {
-		return this.movieSeating;
+		return this.seating;
 	}
     
-    public void setMovieTime(String movieTime) {
-		this.movieTime = movieTime;
+    public void setPlayTime(String play_time) {
+		this.play_time = play_time;
 	}
     
-    public String getMovieTime() {
-		return this.movieTime;
+    public String getPlayTime() {
+		return this.play_time;
 	}
     
     public Integer getTicketCount() {
-        return this.ticketCount;
+        return this.ticket_count;
     }
     public void setTicketCount(final Integer ticketCount) {
-        this.ticketCount = ticketCount;
+        this.ticket_count = ticketCount;
     }
 }
