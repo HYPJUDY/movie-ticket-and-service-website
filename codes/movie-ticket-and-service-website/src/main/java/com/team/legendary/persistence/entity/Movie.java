@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Null;
 
 @Entity
 public class Movie implements Serializable {
@@ -47,14 +48,18 @@ public class Movie implements Serializable {
     @Column(name="duration")
     private Integer duration = null;
 
-	/*@Column(name = "instock")
-    private boolean inStock = false;*/
+	@Column(name = "time")
+    private String time = null;
+	
+	@Column(name = "trailer")
+	private String trailer = null;
 
     public Movie() {
         super();
     }
-    public Movie(final Integer id, final String movieName, final Double price, final String description, final String moviePoster,
-    		final Double movieAvgRating, final String movieCast, final String movieDirection, final String movieGenre, final Integer movieDuration) {
+    public Movie(final Integer id, final String movieName, final Double price, final String description,
+    		final String moviePoster,final Double movieAvgRating, final String movieCast, final String movieDirection,
+    		final String movieGenre, final Integer movieDuration, final String play_time, final String trailer) {
         super();
         this.id = id;
         this.movie_name = movieName;
@@ -67,6 +72,8 @@ public class Movie implements Serializable {
         this.direction = movieDirection;
         this.genre = movieGenre;
         this.duration = movieDuration;
+        this.time = play_time;
+        this.trailer = trailer;
     }
 
 
@@ -147,6 +154,22 @@ public class Movie implements Serializable {
 
     public void setDuration(Integer movieDuration) {
         this.duration = movieDuration;
+    }
+    
+    public String getPlayTime() {
+        return this.time;
+    }
+
+    public void setPlayTime(String time) {
+        this.time = time;
+    }
+    
+    public String getTrailer() {
+        return this.trailer;
+    }
+
+    public void setTrailer(String trailer) {
+        this.trailer = trailer;
     }
 }
 
