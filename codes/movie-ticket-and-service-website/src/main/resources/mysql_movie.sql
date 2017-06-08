@@ -7,7 +7,7 @@
 
 --I add a new attribute called 'theater'
 
---I add a new attribute called 'time', which save today's movie time, 
+--I add a new attribute called 'movie_time', which save today's movie time, 
 --different times split by one space, each time has the format hh:mm
 
 --I add a new attribute called 'trailer', which is a link to the movie's trailer on Youtube.
@@ -26,7 +26,7 @@ CREATE TABLE Movie (
     genre char(30) not null,
     duration int not null,
     theater char(30) not null,
-    time char(100) not null,
+    movie_time char(100) not null,
     trailer char(100) not null,
     primary key (id)
 );
