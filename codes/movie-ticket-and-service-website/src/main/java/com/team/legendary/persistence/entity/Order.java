@@ -44,14 +44,14 @@ public class Order implements Serializable {
     }
 
     public Order(final Integer id, final String customerName, final Double expenditure,
-    		final String movieName, final String movieSeating, final String movieTime, final Integer ticketCount) {
+    		final String movieName, final String movieSeating, final String movieTime, final Integer count) {
 		this.id = id;
     	this.customer_name = customerName;
 		this.expenditure = expenditure;
 		this.movie_name = movieName;
 		this.seating = movieSeating;
 		this.time = movieTime;
-		this.count = ticketCount;
+		this.count = count;
 	}
 	
     public Integer getId() {
@@ -104,7 +104,7 @@ public class Order implements Serializable {
     public Integer getCount() {
         return this.count;
     }
-    public void setCount(final Integer ticketCount) {
-        this.count = ticketCount;
+    public void setCount(final Integer count) {
+        this.count = count;
     }
 }
