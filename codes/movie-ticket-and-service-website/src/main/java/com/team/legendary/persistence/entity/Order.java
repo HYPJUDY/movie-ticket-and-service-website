@@ -85,11 +85,11 @@ public class Order implements Serializable {
 		return this.movie_name;
 	}
     
-    public void setMovieSeating (String movieSeating) {
+    public void setSeating (String movieSeating) {
 		this.seating = movieSeating;
 	}
     
-    public String getMovieSeating() {
+    public String getSeating() {
 		return this.seating;
 	}
     
