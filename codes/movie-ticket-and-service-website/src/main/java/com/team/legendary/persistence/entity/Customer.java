@@ -17,7 +17,7 @@ public class Customer implements Serializable {
 
     @Id
 	@Column(name = "customer_name")
-    private String customerName = null;
+    private String customer_name = null;
 	
 	@Column(name="password")
 	private String password = null;
@@ -27,15 +27,15 @@ public class Customer implements Serializable {
     }
 	
 	public Customer(String customerName, String password) {
-		this.customerName = customerName;
+		this.customer_name = customerName;
 		this.password = password;
 	}
 
     public String getCustomerName() {
-        return this.customerName;
+        return this.customer_name;
     }
     public void setCustomerName(final String customerName) {
-        this.customerName = customerName;
+        this.customer_name = customerName;
     }
     
     public String getPassword() {
