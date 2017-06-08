@@ -44,8 +44,8 @@ public class OrderDaoImpl implements OrderDao {
 			order.setExpenditure(rs.getDouble("expenditure"));
 			order.setMovieName(rs.getString("movie_name"));
 			order.setMovieSeating(rs.getString("seating"));
-			order.setPlayTime(rs.getString("play_time"));
-			order.setTicketCount(rs.getInt("ticket_count"));
+			order.setPlayTime(rs.getString("time"));
+			order.setTicketCount(rs.getInt("count"));
 			return order;
 		}
     	
@@ -63,7 +63,7 @@ public class OrderDaoImpl implements OrderDao {
 	}
 
 	public void create(Order entity) {
-		final String INSERT_SQL = "insert into OrderTable (customer_name, expenditure, movie_name, seating, play_time, ticket_count) values(?,?,?,?,?,?)";
+		final String INSERT_SQL = "insert into OrderTable (customer_name, expenditure, movie_name, seating, time, count) values(?,?,?,?,?,?)";
     	final Order temp = entity;
     	
 		KeyHolder keyHolder = new GeneratedKeyHolder();
