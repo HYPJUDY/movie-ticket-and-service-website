@@ -29,7 +29,7 @@
                 	<form action="/index" th:object="${customer}" method="post" class="form-signin" role="form">
         				
         				<div class="form-group">
-            				<input type="text" class="form-control" name="email" placeholder="UserName" required autofocus th:field="*{customerName}" />
+            				<input type="text" class="form-control" name="email" placeholder="UserName" required autofocus th:field="*{cname}" />
         				</div>
         				<div class="form-group">
             				<input type="password" class="form-control" name="password" placeholder="Password" required th:field="*{password}" />
