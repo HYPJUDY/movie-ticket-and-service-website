@@ -36,7 +36,7 @@ public class MovieDaoImpl implements MovieDao {
 			// TODO Auto-generated method stub
 			Movie movie = new Movie();
 			movie.setId(rs.getInt("id"));
-			movie.setName(rs.getString("movie_name"));
+			movie.setMname(rs.getString("mname"));
 			movie.setPrice(rs.getDouble("price"));
 			movie.setDescription(rs.getString("description"));
 			movie.setPoster(rs.getString("poster"));
@@ -58,13 +58,13 @@ public class MovieDaoImpl implements MovieDao {
 	}
 
 	public Movie findOne(String name) {
-		List<Movie> movies = this.jdbcTemplate.query("select * from Movie where movie_name = '" + name + "'", new DishMapper());
+		List<Movie> movies = this.jdbcTemplate.query("select * from Movie where mname = '" + name + "'", new DishMapper());
 		if (movies.isEmpty()) return null;
 		return movies.get(0);
 	}
 
 	public void create(Movie entity) {
-		final String INSERT_SQL = "insert into Movie (movie_name, price, description, poster, rating, cast, direction, genre, duration, time, trailer) values(?,?,?,?,?,?,?,?,?,?,?)";
+		final String INSERT_SQL = "insert into Movie (mname, price, description, poster, rating, cast, direction, genre, duration, time, trailer) values(?,?,?,?,?,?,?,?,?,?,?)";
 		final Movie temp = entity;
 
 		System.out.println("-------------------------Insert counter!");
@@ -73,7 +73,7 @@ public class MovieDaoImpl implements MovieDao {
 				new PreparedStatementCreator() {
 					public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
 						PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[] {"id"});
-						ps.setString(1, temp.getName());
+						ps.setString(1, temp.getMname());
 						ps.setDouble(2, temp.getPrice());
 						ps.setString(3, temp.getDescription());
 						ps.setString(4, temp.getPoster());
