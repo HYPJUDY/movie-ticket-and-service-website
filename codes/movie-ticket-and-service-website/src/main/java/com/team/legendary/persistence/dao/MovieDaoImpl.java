@@ -4,13 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 import javax.sql.DataSource;
 
-import org.omg.IOP.TAG_MULTIPLE_COMPONENTS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -49,6 +45,8 @@ public class MovieDaoImpl implements MovieDao {
 			movie.setDirection(rs.getString("direction"));
 			movie.setGenre(rs.getString("genre"));
 			movie.setDuration(rs.getInt("duration"));
+			movie.setPlayTime(rs.getString("play_time"));
+			movie.setTrailer(rs.getString("trailer"));
 			return movie;
 		}
 
@@ -66,7 +64,7 @@ public class MovieDaoImpl implements MovieDao {
 	}
 
 	public void create(Movie entity) {
-		final String INSERT_SQL = "insert into Movie (movie_name, price, description, poster, rating, cast, direction, genre, duration) values(?,?,?,?,?,?,?,?,?)";
+		final String INSERT_SQL = "insert into Movie (movie_name, price, description, poster, rating, cast, direction, genre, duration, play_time, trailer) values(?,?,?,?,?,?,?,?,?,?,?)";
 		final Movie temp = entity;
 
 		System.out.println("-------------------------Insert counter!");
@@ -84,6 +82,8 @@ public class MovieDaoImpl implements MovieDao {
 						ps.setString(7, temp.getDirection());
 						ps.setString(8, temp.getGenre());
 						ps.setInt(9, temp.getDuration());
+						ps.setString(10, temp.getPlayTime());
+						ps.setString(11, temp.getTrailer());
 						return ps;
 					}
 				},
