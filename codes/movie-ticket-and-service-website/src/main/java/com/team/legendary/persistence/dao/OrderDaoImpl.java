@@ -42,9 +42,9 @@ public class OrderDaoImpl implements OrderDao {
 			order.setId(rs.getInt("id"));
 			order.setCustomerName(rs.getString("customer_name"));
 			order.setExpenditure(rs.getDouble("expenditure"));
-			order.setMovieName(rs.getString("movie_name"));
+			order.setMovieName(rs.getString("name"));
 			order.setMovieSeating(rs.getString("seating"));
-			order.setMovieTime(rs.getString("movie_time"));
+			order.setPlayTime(rs.getString("play_time"));
 			order.setTicketCount(rs.getInt("ticket_count"));
 			return order;
 		}
@@ -57,13 +57,13 @@ public class OrderDaoImpl implements OrderDao {
 	}
 
 	public Order findOne(Integer id) {
-		List<Order> orders = this.jdbcTemplate.query("select * from OrderTable", new OrderMapper());
+		List<Order> orders = this.jdbcTemplate.query("select * from OrderTable where id =" + id, new OrderMapper());
     	if (orders.isEmpty()) return null;
     	return orders.get(0);
 	}
 
 	public void create(Order entity) {
-		final String INSERT_SQL = "insert into OrderTable (customer_name, expenditure, movie_name, seating, movie_time, ticket_count) values(?,?,?,?,?,?)";
+		final String INSERT_SQL = "insert into OrderTable (customer_name, expenditure, name, seating, play_time, ticket_count) values(?,?,?,?,?,?)";
     	final Order temp = entity;
     	
 		KeyHolder keyHolder = new GeneratedKeyHolder();
@@ -75,7 +75,7 @@ public class OrderDaoImpl implements OrderDao {
 		            ps.setDouble(2, temp.getExpenditure());
 		            ps.setString(3, temp.getMovieName());
 		            ps.setString(4, temp.getMovieSeating());
-		            ps.setString(5, temp.getMovieTime());
+		            ps.setString(5, temp.getPlayTime());
 		            ps.setInt(6, temp.getTicketCount());
 		            return ps;
 		        }
