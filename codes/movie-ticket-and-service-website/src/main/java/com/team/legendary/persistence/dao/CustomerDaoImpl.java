@@ -35,21 +35,21 @@ public class CustomerDaoImpl implements CustomerDao {
 	}
 
 	public Customer findOne(String name) {
-		List<Customer> customers = this.jdbcTemplate.query("select * from Customer where customer_name=" + name, new CustomerMapper());
+		List<Customer> customers = this.jdbcTemplate.query("select * from Customer where cname=" + name, new CustomerMapper());
     	if (customers.isEmpty()) return null;
     	return customers.get(0);
 	}
 
 	public void create(Customer entity) {
-		final String INSERT_SQL = "insert into Customer (customer_name,password) values(?,?)";
+		final String INSERT_SQL = "insert into Customer (cname,password) values(?,?)";
     	final Customer temp = entity;
     	
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		this.jdbcTemplate.update(
 		    new PreparedStatementCreator() {
 		        public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-		            PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[] {"customer_name"});
-		            ps.setString(1, temp.getCustomerName());	
+		            PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[] {"cname"});
+		            ps.setString(1, temp.getCname());	
 		            ps.setString(2, temp.getPassword());
 		            return ps;
 		        }
@@ -63,7 +63,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
 			// TODO Auto-generated method stub
 			Customer customer = new Customer();
-			customer.setCustomerName(rs.getString("customer_name"));
+			customer.setCname(rs.getString("cname"));
 			customer.setPassword(rs.getString("password"));
 			return customer;
 		}
