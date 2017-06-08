@@ -156,11 +156,11 @@ public class Movie implements Serializable {
         this.duration = movieDuration;
     }
     
-    public String getPlayTime() {
+    public String getTime() {
         return this.time;
     }
 
-    public void setPlayTime(String time) {
+    public void setTime(String time) {
         this.time = time;
     }
     

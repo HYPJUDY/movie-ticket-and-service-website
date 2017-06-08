@@ -45,7 +45,7 @@ public class MovieDaoImpl implements MovieDao {
 			movie.setDirection(rs.getString("direction"));
 			movie.setGenre(rs.getString("genre"));
 			movie.setDuration(rs.getInt("duration"));
-			movie.setPlayTime(rs.getString("time"));
+			movie.setTime(rs.getString("time"));
 			movie.setTrailer(rs.getString("trailer"));
 			return movie;
 		}
@@ -82,7 +82,7 @@ public class MovieDaoImpl implements MovieDao {
 						ps.setString(7, temp.getDirection());
 						ps.setString(8, temp.getGenre());
 						ps.setInt(9, temp.getDuration());
-						ps.setString(10, temp.getPlayTime());
+						ps.setString(10, temp.getTime());
 						ps.setString(11, temp.getTrailer());
 						return ps;
 					}
