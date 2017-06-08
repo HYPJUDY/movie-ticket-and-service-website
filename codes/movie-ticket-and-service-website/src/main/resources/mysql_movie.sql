@@ -1,4 +1,4 @@
---created by Zihan Jiang
+﻿--created by Zihan Jiang
 
 --!!!!!!!!!!!!!!!NOTE!!!!!!!!!!!!!!!
 --I change the length of 'description' from 100 to 200
@@ -14,7 +14,7 @@ ALTER DATABASE CHARACTER SET "utf8";
 
 CREATE TABLE Movie (
     id int not null auto_increment,
-    movie_name char(30) not null,
+    mname char(30) not null,
     price double not null,
     description char(200) not null,
     poster char(30) not null,

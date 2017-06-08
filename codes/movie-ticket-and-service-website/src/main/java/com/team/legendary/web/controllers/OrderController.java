@@ -1,5 +1,7 @@
 package com.team.legendary.web.controllers;
 
+import com.team.legendary.persistence.entity.Movie;
+import com.team.legendary.persistence.service.MovieService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.hibernate.sql.ordering.antlr.GeneratedOrderByFragmentParser;
@@ -23,6 +25,8 @@ import com.team.legendary.persistence.service.OrderService;
 
 public class OrderController {
 	@Autowired
+	private MovieService movieService;
+	@Autowired
 	private OrderService orderService;
 
 	@RequestMapping(value = "/ticket_success", method = RequestMethod.POST)
@@ -31,19 +35,23 @@ public class OrderController {
 		if (bindingResult.hasErrors()) {
     		return "redirect:/ticket";
     	}
-		
+
+        System.out.println(order.getMname());
+
+
+		Movie movie = movieService.findByName(order.getMname());
 		Subject subject = SecurityUtils.getSubject();
-		System.out.println(subject.getPrincipal().toString());
-		System.out.println(order.getMname());
-		System.out.println(order.getCount());
-//		order.setCustomerName(subject.getPrincipal().toString());
-//		String seating = order.getMovieSeating();
-//		//order.setExpenditure(expenditure);
-//		System.out.println(order.getMovieName() + order.getMovieSeating());
-		model.addAttribute("name", order.getMname());
+		order.setCname(subject.getPrincipal().toString());
+		order.setExpenditure(order.getCount() * movie.getPrice());
+        System.out.println(subject.getPrincipal().toString());
+
+        orderService.create(order);
+
+        model.addAttribute("order", order);
+
         return "ticket_success";
     }
-	
+
 	@RequestMapping("order/{orderId}")
 	public String orderDetail(@PathVariable("orderId")String orderId) {
 		return	"order";

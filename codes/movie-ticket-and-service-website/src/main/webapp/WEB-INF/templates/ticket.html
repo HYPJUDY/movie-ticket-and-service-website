@@ -2,8 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Movie Ticket and Service Website | Ticket</title>
-
     <!-- for-mobile-apps -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -42,7 +40,8 @@
             <div class="top-header span_top">
                 <!--/*/ <th:block th:include="fragments/utils :: header"></th:block> /*/-->
             </div>
-            <div class="main_ticket" th:object="${movie}">
+            <div class="main_ticket">
+                <h2>Multiplex Theatre Showing Screen 1</h2>
                 <div class="demo">
                     <div id="seat-map">
                         <div class="front">SCREEN</div>
@@ -56,8 +55,8 @@
                             <li>Seats: </li>
                         </ul>
                         <ul class="book-right">
-                            <li th:text="${name}">Gingerclown</li>
-                            <li>April 3, 21:00</li>
+                            <li th:text="${mname}">Gingerclown</li>
+                            <li th:text="${time}"></li>
                             <li><span id="counter">0</span></li>
                             <li><b><i>$</i><span id="total">0</span></b></li>
                             <li id="price" th:text="${price}" style="display: none"></li>
@@ -67,9 +66,11 @@
                         <form id="order-form" th:action="@{/ticket_success}" method="POST" >
                             <fieldset>
                                 <div class="form-group input-group" th:object="${order}">
-                                    <input id="count" name="count" th:value="*{count}" />
-                                    <!--<input name="countt" th:field="11134" style="display: none"/>-->
-
+                                    <input name="mname" type="text" th:value="${mname}" style="display: none">
+                                    <input id="count" name="count" type="text" th:value="*{count}" style="display: none"/>
+                                    <input name="price" type="text" th:value="${price}" style="display: none">
+                                    <input id="seating" name="seating" type="text" th:value="*{seating}" style="display: none">
+                                    <input name="time" type="text" th:value="${time}" style="display: none">
                                     <span class="input-group-btn">
                                         <input class="btn btn-warning" type="submit" value="Book Now!" />
                                     </span>
@@ -87,20 +88,21 @@
                         var $cart = $('#selected-seats'), //Sitting Area
                             $counter = $('#counter'), //Votes
                             $total = $('#total'), //Total money
-                            $count = $('#count');
+                            $count = $('#count'),
+                            $seating = $('#seating');
 
                         var sc = $('#seat-map').seatCharts({
                             map: [  //Seating chart
-                                'aaaaaaa',
-                                'aaaaaaa',
-                                'aaaaaaa',
-                                'aaaaaaa',
-                                'aaaaaaa',
-                                'aaaaaaa',
-                                'aaaaaaa',
-                                'aaaaaaa',
-                                'aaaaaaa',
-                                'aaaaaaa'
+                                'aaaaaaaaaa',
+                                'aaaaaaaaaa',
+                                '__________',
+                                'aaaaaaaa__',
+                                'aaaaaaaaaa',
+                                'aaaaaaaaaa',
+                                'aaaaaaaaaa',
+                                'aaaaaaaaaa',
+                                'aaaaaaaaaa',
+                                '__aaaaaa__'
                             ],
                             naming : {
                                 top : false,
@@ -125,7 +127,12 @@
 
                                     $counter.text(sc.find('selected').length+1);
                                     $total.text(recalculateTotal(sc)+price);
-                                    $count.text($counter.text());
+                                    $count.val($counter.text());
+                                    $cart.each(function(){
+                                        var s = $(this).children().text();
+                                        var ss = $seating.text();
+                                        $seating.val(ss + s);
+                                    });
 
                                     return 'selected';
                                 } else if (this.status() == 'selected') { //Checked
@@ -133,7 +140,7 @@
                                     $counter.text(sc.find('selected').length-1);
                                     //update totalnum
                                     $total.text(recalculateTotal(sc)-price);
-                                    $count.text($counter.text());
+                                    $count.val($counter.text())
 
                                     //Delete reservation
                                     $('#cart-item-'+this.settings.id).remove();

@@ -42,7 +42,7 @@
             <div class="top-header span_top">
                 <!--/*/ <th:block th:include="fragments/loginState :: header_loginState"></th:block> /*/-->
             </div>
-            <div class="main_ticket">
+            <div class="main_ticket" th:object="${order}">
                 <h2>Ticket Detail</h2>
                 <div>
                     <p>You have successfully booked the following ticket(s).</p>
@@ -55,11 +55,11 @@
                             <li>Seats: </li>
                         </ul>
                         <ul class="ticket-right">
-                            <li th:text="${name}">Gingerclown</li>
-                            <li>April 3, 21:00</li>
-                            <li><span>0</span></li>
-                            <li><b><i>$</i><span>0</span></b></li>
-                            <li>Row6 Seat4, Row6 Seat5</li>
+                            <li th:text="${order.mname}">Gingerclown</li>
+                            <li th:text="${order.time}"></li>
+                            <li><span th:text="${order.count}">0</span></li>
+                            <li><b><i th:text="${order.expenditure}">$</i><span>0</span></b></li>
+                            <li th:text="${order.seating}">Row6 Seat4, Row6 Seat5</li>
                         </ul>
                         <div class="clear"></div>
                     </div>

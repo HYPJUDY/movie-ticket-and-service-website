@@ -50,22 +50,13 @@
 				<!--//pop-up-box -->
 				<h3 class="head">Movie on the Theater</h3>
 					<div class="col-md-9 reviews-grids">
-						<!--<tr th:each="movie : ${movies}">-->
-							<!--&lt;!&ndash;<td th:text="${movie.name}">Onions</td>&ndash;&gt;-->
-							<!--<td th:text="${movie.price}">2.41</td>-->
-							<!--<td th:text="${movie.poster}"></td>-->
-							<!--<td th:text="${movie.description}"></td>-->
-							<!--<td th:text="${movie.rating}">33</td>-->
-						<!--</tr>-->
-
 						<div class="review" th:each="movie : ${movies}">
-							<p class="span" th:text="${movie.name}">Interstellar</p>
 							<div class="movie-pic">
-								<a href="single.html"><img th:src="@{ '/images/' + ${ movie.poster }}" alt="" /></a>
+								<a th:href="@{'/single/'+ ${ movie.mname }}"><img th:src="@{ '/images/' + ${ movie.poster }}" alt="" /></a>
 							</div>
 							<div class="review-info">
-								<a class="span" th:text="${movie.name}" href="single.html">Interstellar  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="" th:text="${movie.description}">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
+								<a class="span" th:text="${movie.mname}" th:href="@{'/single/'+ ${ movie.mname }}">Interstellar  <i>Movie Review</i></a>
+								<p class="dirctr" th:text="${movie.description}"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
 								<p class="ratingview c-rating" th:text="${movie.rating}">
@@ -73,7 +64,16 @@
 								<div class="clearfix"></div>
 								<div class="yrw">
 									<div class="rtm text-center">
-										<a th:href="@{'/ticket/'+ ${ movie.name }}">BOOK NOW</a>
+										<form id="ticket-form" action="#" th:action="@{/ticket}" method="GET">
+											<fieldset>
+												<div class="form-group input-group">
+													<input name = "mname" th:value="${movie.mname}" style="display:none;"/>
+													<span class="input-group-btn">
+                    									<input class="btn btn-warning" type="submit" value="BOOK NOW" />
+													</span>
+												</div>
+											</fieldset>
+										</form>
 									</div>
 									<div class="wt text-center">
 										<a class="play-icon popup-with-zoom-anim" href="#small-dialog">WATCH THIS TRAILER</a>
@@ -84,10 +84,10 @@
 					                </div>
 									<div class="clearfix"></div>
 								</div>
-								<p class="info">CAST:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Will Smith, Margot Robbie, Adrian Martinez, Rodrigo Santoro, BD Wong, Robert Taylor</p>
-								<p class="info">DIRECTION: &nbsp;&nbsp;&nbsp;&nbsp;Glenn Ficarra, John Requa</p>
-								<p class="info">GENRE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crime</p>
-								<p class="info">DURATION:&nbsp;&nbsp;&nbsp; &nbsp; 1 hour 45 minutes</p>
+								<p class="info" th:text="${movie.cast}">CAST:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Will Smith, Margot Robbie, Adrian Martinez, Rodrigo Santoro, BD Wong, Robert Taylor</p>
+								<p class="info" th:text="${movie.direction}">DIRECTION: &nbsp;&nbsp;&nbsp;&nbsp;Glenn Ficarra, John Requa</p>
+								<p class="info" th:text="${movie.genre}">GENRE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crime</p>
+								<p class="info" th:text="${movie.duration}">DURATION:&nbsp;&nbsp;&nbsp; &nbsp; 1 hour 45 minutes</p>
 							</div>
 							<div class="clearfix"></div>
 						</div>

@@ -30,7 +30,7 @@ CREATE TABLE OrderTable(
     cname char(30),
     expenditure double not null,
     mname char(30) not null,
-    seating char(30) not null,
+    seating char(200) not null,
     time char(30) not null,
     count int not null,
     primary key(id)

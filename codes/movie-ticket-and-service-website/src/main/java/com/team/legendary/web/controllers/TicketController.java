@@ -43,8 +43,10 @@ public class TicketController {
 
         Movie movie = movieService.findByName(movieName);
         Double price = movie.getPrice();
+        String time = movie.getTime();
         model.addAttribute("mname", movieName);
         model.addAttribute("price", price);
+        model.addAttribute("time", time);
         return "ticket";
     }
 }
