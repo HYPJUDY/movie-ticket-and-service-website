@@ -9,7 +9,7 @@ CREATE TABLE Customer (
 
 CREATE TABLE Movie(
     id int not null auto_increment,
-    name char(30) not null,
+    movie_name char(30) not null,
     price double not null,
     description char(100) not null,
     poster char(30) not null,
@@ -25,7 +25,7 @@ CREATE TABLE OrderTable(
     id int not null auto_increment,
     customer_name char(30),
     expenditure double not null,
-    name char(30) not null,
+    movie_name char(30) not null,
     seating char(30) not null,
     play_time char(30) not null,
     ticket_count int not null,
