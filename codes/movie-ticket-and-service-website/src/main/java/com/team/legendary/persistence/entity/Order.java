@@ -27,8 +27,8 @@ public class Order implements Serializable {
 	@Column(name = "expenditure")
 	private Double expenditure = null;
 	
-	@Column(name = "name")
-	private String name = null;
+	@Column(name = "movie_name")
+	private String movie_name = null;
 	
 	@Column(name = "seating")
 	private String seating = null;
@@ -48,7 +48,7 @@ public class Order implements Serializable {
 		this.id = id;
     	this.customer_name = customerName;
 		this.expenditure = expenditure;
-		this.name = movieName;
+		this.movie_name = movieName;
 		this.seating = movieSeating;
 		this.play_time = movieTime;
 		this.ticket_count = ticketCount;
@@ -77,12 +77,12 @@ public class Order implements Serializable {
 		return this.customer_name;
 	}
     
-    public void setMovieName(String name) {
-		this.name = name;
+    public void setMovieName(String movie_name) {
+		this.movie_name = movie_name;
 	}
     
     public String getMovieName() {
-		return this.name;
+		return this.movie_name;
 	}
     
     public void setMovieSeating (String movieSeating) {
