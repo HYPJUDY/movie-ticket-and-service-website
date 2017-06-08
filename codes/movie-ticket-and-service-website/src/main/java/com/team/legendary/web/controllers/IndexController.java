@@ -75,7 +75,7 @@ public class IndexController {
     @RequestMapping(value = "/index",  method = RequestMethod.POST) 
     public String IndexPage(@ModelAttribute("customer")Customer _customer, ModelMap model) {
     	System.out.println("index");
-    	String _name = _customer.getCustomerName();
+    	String _name = _customer.getCname();
     	String _pass = _customer.getPassword();
     	
     	System.out.println(_name);
