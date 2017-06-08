@@ -36,9 +36,9 @@
         <property name="permissionsLookupEnabled" value="true"></property>
         <property name="dataSource" ref="dataSource"></property>
         <property name="authenticationQuery"
-                  value="SELECT password FROM Customer WHERE customer_name = ?"></property>
+                  value="SELECT password FROM Customer WHERE cname = ?"></property>
         <property name="userRolesQuery"
-                  value="SELECT role_name from Customer_Role left join Role using(role_id) left join Customer using(customer_name) WHERE customer_name = ?"></property>
+                  value="SELECT role_name from Customer_Role left join Role using(role_id) left join Customer using(cname) WHERE cname = ?"></property>
         <property name="permissionsQuery"
                   value="SELECT permission_name FROM Role_Permission left join Role using(role_id) left join Permission using(permission_id) WHERE role_name = ?"></property>
     </bean>
