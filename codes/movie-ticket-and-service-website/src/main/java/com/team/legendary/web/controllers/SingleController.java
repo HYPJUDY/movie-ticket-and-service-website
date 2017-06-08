@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@RequestMapping("/single/{name}")
+@RequestMapping("/single/{mname}")
 public class SingleController {
     @ModelAttribute("order")
     public Order getOrder() {
@@ -27,7 +27,7 @@ public class SingleController {
     private MovieService movieService;
 
     @GetMapping
-    public String getDetail(@PathVariable("name") String name, Model model) {
+    public String getDetail(@PathVariable("mname") String name, Model model) {
         Movie movie = movieService.findByName(name);
         model.addAttribute("movie", movie);
 
