@@ -40,11 +40,11 @@ public class OrderDaoImpl implements OrderDao {
 			// TODO Auto-generated method stub
 			Order order = new Order();
 			order.setId(rs.getInt("id"));
-			order.setCustomerName(rs.getString("customer_name"));
+			order.setCname(rs.getString("cname"));
 			order.setExpenditure(rs.getDouble("expenditure"));
-			order.setMovieName(rs.getString("movie_name"));
+			order.setMname(rs.getString("mname"));
 			order.setSeating(rs.getString("seating"));
-			order.setPlayTime(rs.getString("time"));
+			order.setTime(rs.getString("time"));
 			order.setCount(rs.getInt("count"));
 			return order;
 		}
@@ -63,7 +63,7 @@ public class OrderDaoImpl implements OrderDao {
 	}
 
 	public void create(Order entity) {
-		final String INSERT_SQL = "insert into OrderTable (customer_name, expenditure, movie_name, seating, time, count) values(?,?,?,?,?,?)";
+		final String INSERT_SQL = "insert into OrderTable (cname, expenditure, mname, seating, time, count) values(?,?,?,?,?,?)";
     	final Order temp = entity;
     	
 		KeyHolder keyHolder = new GeneratedKeyHolder();
@@ -71,11 +71,11 @@ public class OrderDaoImpl implements OrderDao {
 		    new PreparedStatementCreator() {
 		        public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
 		            PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[] {"id"});
-		            ps.setString(1, temp.getCustomerName());	
+		            ps.setString(1, temp.getCname());	
 		            ps.setDouble(2, temp.getExpenditure());
-		            ps.setString(3, temp.getMovieName());
+		            ps.setString(3, temp.getMname());
 		            ps.setString(4, temp.getSeating());
-		            ps.setString(5, temp.getPlayTime());
+		            ps.setString(5, temp.getTime());
 		            ps.setInt(6, temp.getCount());
 		            return ps;
 		        }
