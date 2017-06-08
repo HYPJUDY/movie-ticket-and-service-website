@@ -7,17 +7,19 @@ CREATE TABLE Customer (
 
 );
 
-CREATE TABLE Movie(
+CREATE TABLE Movie (
     id int not null auto_increment,
     movie_name char(30) not null,
     price double not null,
-    description char(100) not null,
+    description char(200) not null,
     poster char(30) not null,
     rating double not null,
     cast char(100) not null,
     direction char(30) not null,
     genre char(30) not null,
     duration int not null,
+    play_time char(100) not null,
+    trailer char(100) not null,
     primary key (id)
 );
 
