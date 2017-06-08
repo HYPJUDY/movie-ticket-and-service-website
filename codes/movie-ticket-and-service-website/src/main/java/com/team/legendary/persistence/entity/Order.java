@@ -21,14 +21,14 @@ public class Order implements Serializable {
     @Column(name = "id")
     private Integer id = null;
 	
-	@Column(name = "customer_name")
-	private String customer_name = null;
+	@Column(name = "cname")
+	private String cname = null;
 	
 	@Column(name = "expenditure")
 	private Double expenditure = null;
 	
-	@Column(name = "movie_name")
-	private String movie_name = null;
+	@Column(name = "mname")
+	private String mname = null;
 	
 	@Column(name = "seating")
 	private String seating = null;
@@ -46,9 +46,9 @@ public class Order implements Serializable {
     public Order(final Integer id, final String customerName, final Double expenditure,
     		final String movieName, final String movieSeating, final String movieTime, final Integer count) {
 		this.id = id;
-    	this.customer_name = customerName;
+    	this.cname = customerName;
 		this.expenditure = expenditure;
-		this.movie_name = movieName;
+		this.mname = movieName;
 		this.seating = movieSeating;
 		this.time = movieTime;
 		this.count = count;
@@ -69,35 +69,35 @@ public class Order implements Serializable {
 		return this.expenditure;
 	}
     
-    public void setCustomerName(String customerName) {
-		this.customer_name = customerName;
+    public void setCname(String cname) {
+		this.cname = cname;
 	}
     
-    public String getCustomerName() {
-		return this.customer_name;
+    public String getCname() {
+		return this.cname;
 	}
     
-    public void setMovieName(String movie_name) {
-		this.movie_name = movie_name;
+    public void setMname(String mname) {
+		this.mname = mname;
 	}
     
-    public String getMovieName() {
-		return this.movie_name;
+    public String getMname() {
+		return this.mname;
 	}
     
-    public void setSeating (String movieSeating) {
-		this.seating = movieSeating;
+    public void setSeating (String seating) {
+		this.seating = seating;
 	}
     
     public String getSeating() {
 		return this.seating;
 	}
     
-    public void setPlayTime(String play_time) {
-		this.time = play_time;
+    public void setTime(String time) {
+		this.time = time;
 	}
     
-    public String getPlayTime() {
+    public String getTime() {
 		return this.time;
 	}
     
