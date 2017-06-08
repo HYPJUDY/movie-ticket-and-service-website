@@ -18,7 +18,7 @@ CREATE TABLE Movie (
     direction char(30) not null,
     genre char(30) not null,
     duration int not null,
-    play_time char(100) not null,
+    time char(100) not null,
     trailer char(100) not null,
     primary key (id)
 );
@@ -29,8 +29,8 @@ CREATE TABLE OrderTable(
     expenditure double not null,
     movie_name char(30) not null,
     seating char(30) not null,
-    play_time char(30) not null,
-    ticket_count int not null,
+    time char(30) not null,
+    count int not null,
     primary key(id)
 );
 
