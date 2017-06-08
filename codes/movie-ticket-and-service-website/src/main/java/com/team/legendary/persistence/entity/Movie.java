@@ -32,8 +32,8 @@ public class Movie implements Serializable {
     @Column(name="poster")
     private String poster = null;
     
-    @Column(name="avg_rating")
-    private Double avg_rating = null;
+    @Column(name="rating")
+    private Double rating = null;
     
     @Column(name="cast")
     private String cast = null;
@@ -62,7 +62,7 @@ public class Movie implements Serializable {
         this.description = description;
         this.poster = moviePoster;
         
-        this.avg_rating = movieAvgRating;
+        this.rating = movieAvgRating;
         this.cast = movieCast;
         this.direction = movieDirection;
         this.genre = movieGenre;
@@ -94,20 +94,13 @@ public class Movie implements Serializable {
     }
 
 
-    public String getDescrition() {
+    public String getDescription() {
         return this.description;
     }
-    public void setDescrition(final String description) {
+    public void setDescription(final String description) {
         this.description = description;
     }
-
-    /*public boolean isInStock() {
-        return this.inStock;
-    }
-    public void setInStock(final boolean inStock) {
-        this.inStock = inStock;
-    }*/
-
+    
     public String getPoster() {
         return poster;
     }
@@ -115,21 +108,13 @@ public class Movie implements Serializable {
     public void setPoster(String pic) {
         this.poster = pic;
     }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
     
     public Double getAvgRating() {
-        return this.avg_rating;
+        return this.rating;
     }
 
     public void setAvgRating(Double movieAvgRating) {
-        this.avg_rating = movieAvgRating;
+        this.rating = movieAvgRating;
     }
     
     public String getCast() {
