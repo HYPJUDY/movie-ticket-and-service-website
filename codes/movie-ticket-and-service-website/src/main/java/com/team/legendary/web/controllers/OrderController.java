@@ -34,13 +34,13 @@ public class OrderController {
 		
 		Subject subject = SecurityUtils.getSubject();
 		System.out.println(subject.getPrincipal().toString());
-		System.out.println(order.getMovieName());
+		System.out.println(order.getMname());
 		System.out.println(order.getCount());
 //		order.setCustomerName(subject.getPrincipal().toString());
 //		String seating = order.getMovieSeating();
 //		//order.setExpenditure(expenditure);
 //		System.out.println(order.getMovieName() + order.getMovieSeating());
-		model.addAttribute("name", order.getMovieName());
+		model.addAttribute("name", order.getMname());
         return "ticket_success";
     }
 	
