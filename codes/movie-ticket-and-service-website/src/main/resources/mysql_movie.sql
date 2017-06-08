@@ -5,7 +5,7 @@
 
 --'cast' means the actor/actress of the movie, I splited different names by one space
 
---I add a new attribute called 'play_time', which save movie's play time, 
+--I add a new attribute called 'time', which save movie's play time, 
 --different times split by one space, each time has the format hh:mm
 
 --I add a new attribute called 'trailer', which is a link to the movie's trailer on Youtube.
@@ -23,7 +23,7 @@ CREATE TABLE Movie (
     direction char(30) not null,
     genre char(30) not null,
     duration int not null,
-    play_time char(100) not null,
+    time char(100) not null,
     trailer char(100) not null,
     primary key (id)
 );
