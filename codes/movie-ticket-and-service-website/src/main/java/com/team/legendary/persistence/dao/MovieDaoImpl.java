@@ -45,7 +45,7 @@ public class MovieDaoImpl implements MovieDao {
 			movie.setDirection(rs.getString("direction"));
 			movie.setGenre(rs.getString("genre"));
 			movie.setDuration(rs.getInt("duration"));
-			movie.setPlayTime(rs.getString("play_time"));
+			movie.setPlayTime(rs.getString("time"));
 			movie.setTrailer(rs.getString("trailer"));
 			return movie;
 		}
@@ -64,7 +64,7 @@ public class MovieDaoImpl implements MovieDao {
 	}
 
 	public void create(Movie entity) {
-		final String INSERT_SQL = "insert into Movie (movie_name, price, description, poster, rating, cast, direction, genre, duration, play_time, trailer) values(?,?,?,?,?,?,?,?,?,?,?)";
+		final String INSERT_SQL = "insert into Movie (movie_name, price, description, poster, rating, cast, direction, genre, duration, time, trailer) values(?,?,?,?,?,?,?,?,?,?,?)";
 		final Movie temp = entity;
 
 		System.out.println("-------------------------Insert counter!");
