@@ -101,10 +101,10 @@ public class Order implements Serializable {
 		return this.time;
 	}
     
-    public Integer getTicketCount() {
+    public Integer getCount() {
         return this.count;
     }
-    public void setTicketCount(final Integer ticketCount) {
+    public void setCount(final Integer ticketCount) {
         this.count = ticketCount;
     }
 }

@@ -45,7 +45,7 @@ public class OrderDaoImpl implements OrderDao {
 			order.setMovieName(rs.getString("movie_name"));
 			order.setMovieSeating(rs.getString("seating"));
 			order.setPlayTime(rs.getString("time"));
-			order.setTicketCount(rs.getInt("count"));
+			order.setCount(rs.getInt("count"));
 			return order;
 		}
     	
@@ -76,7 +76,7 @@ public class OrderDaoImpl implements OrderDao {
 		            ps.setString(3, temp.getMovieName());
 		            ps.setString(4, temp.getMovieSeating());
 		            ps.setString(5, temp.getPlayTime());
-		            ps.setInt(6, temp.getTicketCount());
+		            ps.setInt(6, temp.getCount());
 		            return ps;
 		        }
 		    },
