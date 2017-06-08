@@ -32,7 +32,7 @@ public class TicketController {
     private MovieService movieService;
 	
     @GetMapping
-    public String getTicket(@RequestParam("movieName") String movieName, Model model) {
+    public String getTicket(@RequestParam("mname") String movieName, Model model) {
         Subject subject = SecurityUtils.getSubject();
         Boolean vipFlag = false;
         //VIP通道
@@ -43,7 +43,7 @@ public class TicketController {
 
         Movie movie = movieService.findByName(movieName);
         Double price = movie.getPrice();
-        model.addAttribute("name", movieName);
+        model.addAttribute("mname", movieName);
         model.addAttribute("price", price);
         return "ticket";
     }
