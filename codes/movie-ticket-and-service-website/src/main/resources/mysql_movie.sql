@@ -3,7 +3,7 @@
 --!!!!!!!!!!!!!!!NOTE!!!!!!!!!!!!!!!
 --I change the length of 'description' from 100 to 200
 
---'movieCast' means the actor/actress of the movie, I splited different names by one space
+--'cast' means the actor/actress of the movie, I splited different names by one space
 
 --I add a new attribute called 'theater'
 
