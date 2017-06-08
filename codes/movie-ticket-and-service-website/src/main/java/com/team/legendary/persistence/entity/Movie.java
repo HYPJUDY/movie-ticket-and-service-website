@@ -20,8 +20,8 @@ public class Movie implements Serializable {
     @Column(name = "id")
     private Integer id = null;
 
-    @Column(name = "name")
-    private String name = null;
+    @Column(name = "movie_name")
+    private String movie_name = null;
 
     @Column(name = "price")
     private Double price = null;
@@ -57,7 +57,7 @@ public class Movie implements Serializable {
     		final Double movieAvgRating, final String movieCast, final String movieDirection, final String movieGenre, final Integer movieDuration) {
         super();
         this.id = id;
-        this.name = movieName;
+        this.movie_name = movieName;
         this.price = price;
         this.description = description;
         this.poster = moviePoster;
@@ -79,10 +79,10 @@ public class Movie implements Serializable {
 
 
     public String getName() {
-        return this.name;
+        return this.movie_name;
     }
     public void setName(final String movieName) {
-        this.name = movieName;
+        this.movie_name = movieName;
     }
 
 
