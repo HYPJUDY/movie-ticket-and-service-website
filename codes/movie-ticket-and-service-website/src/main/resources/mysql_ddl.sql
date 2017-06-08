@@ -1,15 +1,17 @@
 ﻿--通过以下命令创建数据库
-
+DROP DATABASE movie_ticket;
+CREATE DATABASE movie_ticket;
+use movie_ticket;
 ALTER DATABASE CHARACTER SET "utf8";
 CREATE TABLE Customer (
-     customer_name CHAR(30) NOT NULL,
+     cname CHAR(30) NOT NULL,
      password char(30) not null
 
 );
 
 CREATE TABLE Movie (
     id int not null auto_increment,
-    movie_name char(30) not null,
+    mname char(30) not null,
     price double not null,
     description char(200) not null,
     poster char(30) not null,
@@ -25,9 +27,9 @@ CREATE TABLE Movie (
 
 CREATE TABLE OrderTable(
     id int not null auto_increment,
-    customer_name char(30),
+    cname char(30),
     expenditure double not null,
-    movie_name char(30) not null,
+    mname char(30) not null,
     seating char(30) not null,
     time char(30) not null,
     count int not null,
@@ -42,7 +44,7 @@ CREATE TABLE Role (
 
 CREATE TABLE Customer_Role (
     role_id int(11) not null,
-    customer_name char(30) not null
+    cname char(30) not null
 );
 
 CREATE TABLE Permission(
@@ -56,7 +58,7 @@ CREATE TABLE Role_Permission(
     role_id int(11) not null
 );
 
-INSERT INTO Customer VALUES("linxp", "password");
+INSERT INTO Customer VALUES("linxp", "111");
 INSERT INTO Role VALUES(0, "CustomerVIP");
 INSERT INTO Permission VALUES(0, "Dischange");
 INSERT INTO Role_Permission VALUES(0, 0);
