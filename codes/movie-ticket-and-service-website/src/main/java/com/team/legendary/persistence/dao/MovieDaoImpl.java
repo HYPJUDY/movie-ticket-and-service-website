@@ -42,9 +42,9 @@ public class MovieDaoImpl implements MovieDao {
 			movie.setId(rs.getInt("id"));
 			movie.setName(rs.getString("movie_name"));
 			movie.setPrice(rs.getDouble("price"));
-			movie.setDescrition(rs.getString("description"));
+			movie.setDescription(rs.getString("description"));
 			movie.setPoster(rs.getString("poster"));
-			movie.setAvgRating(rs.getDouble("avg_rating"));
+			movie.setAvgRating(rs.getDouble("rating"));
 			movie.setCast(rs.getString("cast"));
 			movie.setDirection(rs.getString("direction"));
 			movie.setGenre(rs.getString("genre"));
@@ -66,7 +66,7 @@ public class MovieDaoImpl implements MovieDao {
 	}
 
 	public void create(Movie entity) {
-		final String INSERT_SQL = "insert into Movie (movie_name, price, description, poster, avg_rating, cast, direction, genre, duration) values(?,?,?,?,?,?,?,?,?)";
+		final String INSERT_SQL = "insert into Movie (movie_name, price, description, poster, rating, cast, direction, genre, duration) values(?,?,?,?,?,?,?,?,?)";
 		final Movie temp = entity;
 
 		System.out.println("-------------------------Insert counter!");
@@ -77,7 +77,7 @@ public class MovieDaoImpl implements MovieDao {
 						PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[] {"id"});
 						ps.setString(1, temp.getName());
 						ps.setDouble(2, temp.getPrice());
-						ps.setString(3, temp.getDescrition());
+						ps.setString(3, temp.getDescription());
 						ps.setString(4, temp.getPoster());
 						ps.setDouble(5, temp.getAvgRating());
 						ps.setString(6, temp.getCast());
