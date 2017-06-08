@@ -44,7 +44,7 @@ public class MovieDaoImpl implements MovieDao {
 			movie.setPrice(rs.getDouble("price"));
 			movie.setDescription(rs.getString("description"));
 			movie.setPoster(rs.getString("poster"));
-			movie.setAvgRating(rs.getDouble("rating"));
+			movie.setRating(rs.getDouble("rating"));
 			movie.setCast(rs.getString("cast"));
 			movie.setDirection(rs.getString("direction"));
 			movie.setGenre(rs.getString("genre"));
@@ -79,7 +79,7 @@ public class MovieDaoImpl implements MovieDao {
 						ps.setDouble(2, temp.getPrice());
 						ps.setString(3, temp.getDescription());
 						ps.setString(4, temp.getPoster());
-						ps.setDouble(5, temp.getAvgRating());
+						ps.setDouble(5, temp.getRating());
 						ps.setString(6, temp.getCast());
 						ps.setString(7, temp.getDirection());
 						ps.setString(8, temp.getGenre());
