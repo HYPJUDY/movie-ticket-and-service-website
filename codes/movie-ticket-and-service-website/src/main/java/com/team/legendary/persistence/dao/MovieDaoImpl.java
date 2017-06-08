@@ -40,7 +40,7 @@ public class MovieDaoImpl implements MovieDao {
 			// TODO Auto-generated method stub
 			Movie movie = new Movie();
 			movie.setId(rs.getInt("id"));
-			movie.setName(rs.getString("name"));
+			movie.setName(rs.getString("movie_name"));
 			movie.setPrice(rs.getDouble("price"));
 			movie.setDescrition(rs.getString("description"));
 			movie.setPoster(rs.getString("poster"));
@@ -60,13 +60,13 @@ public class MovieDaoImpl implements MovieDao {
 	}
 
 	public Movie findOne(String name) {
-		List<Movie> movies = this.jdbcTemplate.query("select * from Movie where name = '" + name + "'", new DishMapper());
+		List<Movie> movies = this.jdbcTemplate.query("select * from Movie where movie_name = '" + name + "'", new DishMapper());
 		if (movies.isEmpty()) return null;
 		return movies.get(0);
 	}
 
 	public void create(Movie entity) {
-		final String INSERT_SQL = "insert into Movie (name, price, description, poster, avg_rating, cast, direction, genre, duration) values(?,?,?,?,?,?,?,?,?)";
+		final String INSERT_SQL = "insert into Movie (movie_name, price, description, poster, avg_rating, cast, direction, genre, duration) values(?,?,?,?,?,?,?,?,?)";
 		final Movie temp = entity;
 
 		System.out.println("-------------------------Insert counter!");
