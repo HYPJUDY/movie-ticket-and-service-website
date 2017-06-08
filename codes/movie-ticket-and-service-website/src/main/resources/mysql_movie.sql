@@ -7,10 +7,10 @@
 
 --I add a new attribute called 'theater'
 
---I add a new attribute called movieTime, which save today's movie time, 
+--I add a new attribute called 'time', which save today's movie time, 
 --different times split by one space, each time has the format hh:mm
 
---I add a new attribute called trailer, which is a link to the movie's trailer on Youtube.
+--I add a new attribute called 'trailer', which is a link to the movie's trailer on Youtube.
 
 ALTER DATABASE CHARACTER SET "utf8";
 
@@ -19,14 +19,14 @@ CREATE TABLE Movie (
     movie_name char(30) not null,
     price double not null,
     description char(200) not null,
-    moviePoster char(30) not null,
-    movieAvgRating double not null,
-    movieCast char(100) not null,
-    movieDirection char(30) not null,
-    movieGenre char(30) not null,
-    movieDuration int not null,
+    poster char(30) not null,
+    rating double not null,
+    cast char(100) not null,
+    direction char(30) not null,
+    genre char(30) not null,
+    duration int not null,
     theater char(30) not null,
-    movieTime char(100) not null,
+    time char(100) not null,
     trailer char(100) not null,
     primary key (id)
 );
