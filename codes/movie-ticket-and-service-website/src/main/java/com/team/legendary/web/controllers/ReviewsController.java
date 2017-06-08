@@ -37,7 +37,7 @@ public class ReviewsController {
 	}
 	
     @GetMapping
-    public String getMenu(Model model, HttpSession session)
+    public String getReviews(Model model)
     {
         //model.addAttribute("title", "Movie List");
         Subject subject = SecurityUtils.getSubject();

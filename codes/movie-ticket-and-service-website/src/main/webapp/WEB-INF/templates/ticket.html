@@ -42,7 +42,7 @@
             <div class="top-header span_top">
                 <!--/*/ <th:block th:include="fragments/utils :: header"></th:block> /*/-->
             </div>
-            <div class="main_ticket">
+            <div class="main_ticket" th:object="${movie}">
                 <h2>Multiplex Theatre Showing Screen 1</h2>
                 <div class="demo">
                     <div id="seat-map">
@@ -57,27 +57,38 @@
                             <li>Seats: </li>
                         </ul>
                         <ul class="book-right">
-                            <li>Gingerclown</li>
+                            <li th:text="${name}">Gingerclown</li>
                             <li>April 3, 21:00</li>
                             <li><span id="counter">0</span></li>
                             <li><b><i>$</i><span id="total">0</span></b></li>
+                            <li id="price" th:text="${price}" style="display: none"></li>
                         </ul>
                         <div class="clear"></div>
                         <ul id="selected-seats" class="scrollbar scrollbar1"></ul>
+                        <form id="order-form" th:action="@{/ticket_success}" method="POST" >
+                            <fieldset>
+                                <div class="form-group input-group" th:object="${order}">
+                                    <input id="count" name="count" th:value="*{count}" />
+                                    <!--<input name="countt" th:field="11134" style="display: none"/>-->
 
-
-                        <button class="checkout-button" onclick="{location.href='ticket_success.html'}">Book Now</button>
+                                    <span class="input-group-btn">
+                                        <input class="btn btn-warning" type="submit" value="Book Now!" />
+                                    </span>
+                                </div>
+                            </fieldset>
+                        </form>
                         <div id="legend"></div>
                     </div>
                     <div style="clear:both"></div>
                 </div>
 
                 <script type="text/javascript">
-                    var price = 10; //price
+                    var price = parseFloat($('#price').text());
                     $(document).ready(function() {
                         var $cart = $('#selected-seats'), //Sitting Area
                             $counter = $('#counter'), //Votes
-                            $total = $('#total'); //Total money
+                            $total = $('#total'), //Total money
+                            $count = $('#count');
 
                         var sc = $('#seat-map').seatCharts({
                             map: [  //Seating chart
@@ -115,6 +126,7 @@
 
                                     $counter.text(sc.find('selected').length+1);
                                     $total.text(recalculateTotal(sc)+price);
+                                    $count.text($counter.text());
 
                                     return 'selected';
                                 } else if (this.status() == 'selected') { //Checked
@@ -122,6 +134,7 @@
                                     $counter.text(sc.find('selected').length-1);
                                     //update totalnum
                                     $total.text(recalculateTotal(sc)-price);
+                                    $count.text($counter.text());
 
                                     //Delete reservation
                                     $('#cart-item-'+this.settings.id).remove();

@@ -25,19 +25,23 @@ public class OrderController {
 	@Autowired
 	private OrderService orderService;
 
-	@RequestMapping(value = "/order", method = RequestMethod.POST)
+	@RequestMapping(value = "/ticket_success", method = RequestMethod.POST)
     public String finishOrderTicket(final ModelMap model, @ModelAttribute("order") Order order, final BindingResult bindingResult ) {
     	model.clear();
 		if (bindingResult.hasErrors()) {
-    		return "redirect:/order";
+    		return "redirect:/ticket";
     	}
 		
 		Subject subject = SecurityUtils.getSubject();
-		order.setCustomerName(subject.getPrincipal().toString());
-		String seating = order.getMovieSeating();
-		//order.setExpenditure(expenditure);
-		System.out.println(order.getMovieName() + order.getMovieSeating());
-        return "order";
+		System.out.println(subject.getPrincipal().toString());
+		System.out.println(order.getMovieName());
+		System.out.println(order.getCount());
+//		order.setCustomerName(subject.getPrincipal().toString());
+//		String seating = order.getMovieSeating();
+//		//order.setExpenditure(expenditure);
+//		System.out.println(order.getMovieName() + order.getMovieSeating());
+		model.addAttribute("name", order.getMovieName());
+        return "ticket_success";
     }
 	
 	@RequestMapping("order/{orderId}")

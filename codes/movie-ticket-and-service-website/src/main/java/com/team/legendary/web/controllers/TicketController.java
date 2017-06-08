@@ -20,7 +20,7 @@ import org.springframework.ui.Model;
  */
 
 @Controller
-@RequestMapping("/ticket/{movieName}")
+@RequestMapping("/ticket")
 public class TicketController {
 	
 	@ModelAttribute("order")
@@ -32,8 +32,7 @@ public class TicketController {
     private MovieService movieService;
 	
     @GetMapping
-    public String getTicket(@PathVariable("movieName") String movieName, Model model) {
-
+    public String getTicket(@RequestParam("movieName") String movieName, Model model) {
         Subject subject = SecurityUtils.getSubject();
         Boolean vipFlag = false;
         //VIP通道
@@ -41,7 +40,11 @@ public class TicketController {
             vipFlag = true;
         }
         model.addAttribute("vipFlag", vipFlag);
-        model.addAttribute("movieName", movieName);
+
+        Movie movie = movieService.findByName(movieName);
+        Double price = movie.getPrice();
+        model.addAttribute("name", movieName);
+        model.addAttribute("price", price);
         return "ticket";
     }
 }
