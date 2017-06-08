@@ -36,7 +36,7 @@ INSERT INTO Movie VALUES(1, "神奇女侠", 28, "故事讲述盖尔·加朵饰�
 						 "映联万和广州南丰汇影城", "10:45 13:30 14:20 16:15 19:00", "https://www.youtube.com/watch?v=VSB4wGIdDwo");
 INSERT INTO Movie VALUES(2, "加勒比海盗5：死无对证 ", 23, "亡灵萨拉查船长率领亡灵军队逃出百慕大三角区，扬言杀尽所有海盗，头号目标就是杰克船长。为对抗命运，杰克船长将起航寻找传说中海神波塞冬的三叉戟，因为这是能统治整个海洋的神器。波澜壮阔的海战争霸和史诗冒险就此展开。",
 						 "movies/2.jpg", 7.6, "约翰尼·德普 哈维尔·巴登", "乔阿吉姆·罗恩尼", "动作/冒险/奇幻", 129,
-						 "广州飞扬影城-正佳IMAX店", "13:30 15:55 18;20 20:45 23:10", "https://www.youtube.com/watch?v=Hgeu5rhoxxY");
+						 "广州飞扬影城-正佳IMAX店", "13:30 15:55 18:20 20:45 23:10", "https://www.youtube.com/watch?v=Hgeu5rhoxxY");
 INSERT INTO Movie VALUES(3, "摔跤吧！爸爸", 18, "本片为Mahavir Singh Phogat教授自己的两个女儿Babita Kumari和Geeta Phogat摔跤的传记片。Geeta后来成为了印度第一位女性摔跤运动员，在2010年的英联邦运动会上夺得了女子52Kg重量级的金牌，而她的姐姐Babita则获得了55Kg重量级的银牌。",
 						 "movies/3.jpg", 8.6, "阿米尔·汗 法缇玛·萨那·纱卡", "尼特什·提瓦瑞", "喜剧/动作/家庭", 140,
 						 "保利国际影城广州中环店", "13:00 14:05 16:40 19:15 21:50", "https://www.youtube.com/watch?v=x_7YlGv9u1g");
