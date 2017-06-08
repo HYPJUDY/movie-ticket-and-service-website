@@ -33,11 +33,11 @@ public class Order implements Serializable {
 	@Column(name = "seating")
 	private String seating = null;
 	
-	@Column(name = "play_time")
-	private String play_time = null;
+	@Column(name = "time")
+	private String time = null;
 	
-	@Column(name = "ticket_count")
-	private Integer ticket_count = null;
+	@Column(name = "count")
+	private Integer count = null;
 	
 	public Order() {
         super();
@@ -50,8 +50,8 @@ public class Order implements Serializable {
 		this.expenditure = expenditure;
 		this.movie_name = movieName;
 		this.seating = movieSeating;
-		this.play_time = movieTime;
-		this.ticket_count = ticketCount;
+		this.time = movieTime;
+		this.count = ticketCount;
 	}
 	
     public Integer getId() {
@@ -94,17 +94,17 @@ public class Order implements Serializable {
 	}
     
     public void setPlayTime(String play_time) {
-		this.play_time = play_time;
+		this.time = play_time;
 	}
     
     public String getPlayTime() {
-		return this.play_time;
+		return this.time;
 	}
     
     public Integer getTicketCount() {
-        return this.ticket_count;
+        return this.count;
     }
     public void setTicketCount(final Integer ticketCount) {
-        this.ticket_count = ticketCount;
+        this.count = ticketCount;
     }
 }
