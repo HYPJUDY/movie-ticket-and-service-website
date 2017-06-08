@@ -109,11 +109,11 @@ public class Movie implements Serializable {
         this.poster = pic;
     }
     
-    public Double getAvgRating() {
+    public Double getRating() {
         return this.rating;
     }
 
-    public void setAvgRating(Double movieAvgRating) {
+    public void setRating(Double movieAvgRating) {
         this.rating = movieAvgRating;
     }
     

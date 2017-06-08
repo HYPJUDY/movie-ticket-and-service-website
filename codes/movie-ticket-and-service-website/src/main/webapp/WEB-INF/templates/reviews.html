@@ -1,10 +1,13 @@
 
 
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<title>Movie Ticket and Service Website | Reviews</title>
+	<link th:href="@{css/popuo-box.css}" rel="stylesheet" type="text/css" media="all" />
+	<script th:src="@{js/jquery.magnific-popup.js}" type="text/javascript"></script>
 
 	<!--/*/ <th:block th:include="fragments/utils :: head"></th:block> /*/-->
 
@@ -27,8 +30,7 @@
 			</div>
 			<div class="reviews-section">
 			    <!-- pop-up-box -->
-				<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-				<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+
 				<script>
                     $(document).ready(function() {
                         $('.popup-with-zoom-anim').magnificPopup({
@@ -48,21 +50,30 @@
 				<!--//pop-up-box -->
 				<h3 class="head">Movie on the Theater</h3>
 					<div class="col-md-9 reviews-grids">
-						<div class="review">
+						<!--<tr th:each="movie : ${movies}">-->
+							<!--&lt;!&ndash;<td th:text="${movie.name}">Onions</td>&ndash;&gt;-->
+							<!--<td th:text="${movie.price}">2.41</td>-->
+							<!--<td th:text="${movie.poster}"></td>-->
+							<!--<td th:text="${movie.description}"></td>-->
+							<!--<td th:text="${movie.rating}">33</td>-->
+						<!--</tr>-->
+
+						<div class="review" th:each="movie : ${movies}">
+							<p class="span" th:text="${movie.name}">Interstellar</p>
 							<div class="movie-pic">
-								<a href="single.html"><img src="images/r4.jpg" alt="" /></a>
+								<a href="single.html"><img th:src="@{ '/images/' + ${ movie.poster }}" alt="" /></a>
 							</div>
 							<div class="review-info">
-								<a class="span" href="single.html">Interstellar  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
+								<a class="span" th:text="${movie.name}" href="single.html">Interstellar  <i>Movie Review</i></a>
+								<p class="dirctr"><a href="" th:text="${movie.description}">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<p class="ratingview c-rating">								
+								<p class="ratingview c-rating" th:text="${movie.rating}">
 								&nbsp; 3.3/5</p>
 								<div class="clearfix"></div>
 								<div class="yrw">
 									<div class="rtm text-center">
-										<a href="ticket">BOOK NOW</a>
+										<a th:href="@{'/ticket/'+ ${ movie.name }}">BOOK NOW</a>
 									</div>
 									<div class="wt text-center">
 										<a class="play-icon popup-with-zoom-anim" href="#small-dialog">WATCH THIS TRAILER</a>
@@ -80,16 +91,18 @@
 							</div>
 							<div class="clearfix"></div>
 						</div>
+
+						<!--
 						<div class="review">
 							<div class="movie-pic">
 								<a href="single.html"><img src="images/r6.jpg" alt="" /></a>
 							</div>
 							<div class="review-info">
 								<a class="span" href="single.html">Big Hero6  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
+								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<p class="ratingview c-rating">								
+								<p class="ratingview c-rating">
 								&nbsp; 3.3/5</p>
 								<div class="clearfix"></div>
 								<div class="yrw">
@@ -118,10 +131,10 @@
 							</div>
 							<div class="review-info">
 								<a class="span" href="single.html">Interstellar  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
+								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<p class="ratingview c-rating">								
+								<p class="ratingview c-rating">
 								&nbsp; 3.3/5</p>
 								<div class="clearfix"></div>
 								<div class="yrw">
@@ -150,10 +163,10 @@
 							</div>
 							<div class="review-info">
 								<a class="span" href="single.html">Interstellar  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
+								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<p class="ratingview c-rating">								
+								<p class="ratingview c-rating">
 								&nbsp; 3.3/5</p>
 								<div class="clearfix"></div>
 								<div class="yrw">
@@ -182,10 +195,10 @@
 							</div>
 							<div class="review-info">
 								<a class="span" href="single.html">Interstellar  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
+								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<p class="ratingview c-rating">								
+								<p class="ratingview c-rating">
 								&nbsp; 3.3/5</p>
 								<div class="clearfix"></div>
 								<div class="yrw">
@@ -208,6 +221,8 @@
 							</div>
 							<div class="clearfix"></div>
 						</div>
+						-->
+
 					</div>
 					<div class="col-md-3 side-bar">
 						<div class="entertainment">
