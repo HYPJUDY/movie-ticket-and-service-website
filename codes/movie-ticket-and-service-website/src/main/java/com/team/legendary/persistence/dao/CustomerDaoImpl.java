@@ -63,7 +63,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
 			// TODO Auto-generated method stub
 			Customer customer = new Customer();
-			customer.setCustomerName(rs.getString("customerName"));
+			customer.setCustomerName(rs.getString("customer_name"));
 			customer.setPassword(rs.getString("password"));
 			return customer;
 		}
