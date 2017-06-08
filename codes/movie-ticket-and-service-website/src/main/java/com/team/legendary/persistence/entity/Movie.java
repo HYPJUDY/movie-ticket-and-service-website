@@ -20,8 +20,8 @@ public class Movie implements Serializable {
     @Column(name = "id")
     private Integer id = null;
 
-    @Column(name = "movie_name")
-    private String movieName = null;
+    @Column(name = "name")
+    private String name = null;
 
     @Column(name = "price")
     private Double price = null;
@@ -30,22 +30,22 @@ public class Movie implements Serializable {
     private String description = null;
 
     @Column(name="poster")
-    private String moviePoster = null;
+    private String poster = null;
     
     @Column(name="avg_rating")
-    private Double movieAvgRating = null;
+    private Double avg_rating = null;
     
     @Column(name="cast")
-    private String movieCast = null;
+    private String cast = null;
     
     @Column(name="direction")
-    private String movieDirection = null;
+    private String direction = null;
     
     @Column(name="genre")
-    private String movieGenre = null;
+    private String genre = null;
     
     @Column(name="duration")
-    private Integer movieDuration = null;
+    private Integer duration = null;
 
 	/*@Column(name = "instock")
     private boolean inStock = false;*/
@@ -57,16 +57,16 @@ public class Movie implements Serializable {
     		final Double movieAvgRating, final String movieCast, final String movieDirection, final String movieGenre, final Integer movieDuration) {
         super();
         this.id = id;
-        this.movieName = movieName;
+        this.name = movieName;
         this.price = price;
         this.description = description;
-        this.moviePoster = moviePoster;
+        this.poster = moviePoster;
         
-        this.movieAvgRating = movieAvgRating;
-        this.movieCast = movieCast;
-        this.movieDirection = movieDirection;
-        this.movieGenre = movieGenre;
-        this.movieDuration = movieDuration;
+        this.avg_rating = movieAvgRating;
+        this.cast = movieCast;
+        this.direction = movieDirection;
+        this.genre = movieGenre;
+        this.duration = movieDuration;
     }
 
 
@@ -79,10 +79,10 @@ public class Movie implements Serializable {
 
 
     public String getName() {
-        return this.movieName;
+        return this.name;
     }
     public void setName(final String movieName) {
-        this.movieName = movieName;
+        this.name = movieName;
     }
 
 
@@ -109,11 +109,11 @@ public class Movie implements Serializable {
     }*/
 
     public String getPoster() {
-        return moviePoster;
+        return poster;
     }
 
     public void setPoster(String pic) {
-        this.moviePoster = pic;
+        this.poster = pic;
     }
 
     public String getDescription() {
@@ -125,43 +125,43 @@ public class Movie implements Serializable {
     }
     
     public Double getAvgRating() {
-        return this.movieAvgRating;
+        return this.avg_rating;
     }
 
     public void setAvgRating(Double movieAvgRating) {
-        this.movieAvgRating = movieAvgRating;
+        this.avg_rating = movieAvgRating;
     }
     
     public String getCast() {
-        return this.movieCast;
+        return this.cast;
     }
 
     public void setCast(String description) {
-        this.description = description;
+        this.cast = description;
     }
     
     public String getDirection() {
-        return this.movieDirection;
+        return this.direction;
     }
 
     public void setDirection(String movieDirection) {
-        this.movieDirection = movieDirection;
+        this.direction = movieDirection;
     }
     
     public String getGenre() {
-        return this.movieGenre;
+        return this.genre;
     }
 
     public void setGenre(String movieGenre) {
-        this.movieGenre = movieGenre;
+        this.genre = movieGenre;
     }
     
     public Integer getDuration() {
-        return this.movieDuration;
+        return this.duration;
     }
 
     public void setDuration(Integer movieDuration) {
-        this.movieDuration = movieDuration;
+        this.duration = movieDuration;
     }
 }
 
