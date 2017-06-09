@@ -1,4 +1,3 @@
-﻿--通过以下命令创建数据库
 DROP DATABASE movie_ticket;
 CREATE DATABASE movie_ticket;
 use movie_ticket;
