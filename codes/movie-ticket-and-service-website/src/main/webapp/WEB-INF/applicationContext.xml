@@ -15,6 +15,10 @@
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
    		
+   		<!-- Windows User -->
+        <!-- <property name="url" value="jdbc:mysql://127.0.0.1:3306/movie_ticket?createDatabaseIfNotExist=true&amp;useSSL=true" /> -->
+         
+        <!-- Linux User -->
         <property name="url" value="jdbc:mysql://127.0.0.1:3306/movie_ticket?createDatabaseIfNotExist=true&amp;verifyServerCertificate=false&amp;useSSL=true" />
         
         <property name="username" value="root" />
