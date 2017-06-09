@@ -50,6 +50,8 @@ public class ReviewsController {
         List<Movie> movies = movieService.findAll();
         model.addAttribute("movies", movies);
 
+        System.out.println(movies.get(2).getTrailer());
+
         return "reviews";
     }
 }

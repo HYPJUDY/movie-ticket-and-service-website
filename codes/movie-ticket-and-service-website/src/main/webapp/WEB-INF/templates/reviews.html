@@ -6,8 +6,6 @@
 
 <head>
 	<title>Movie Ticket and Service Website | Reviews</title>
-	<link th:href="@{css/popuo-box.css}" rel="stylesheet" type="text/css" media="all" />
-	<script th:src="@{js/jquery.magnific-popup.js}" type="text/javascript"></script>
 
 	<!--/*/ <th:block th:include="fragments/utils :: head"></th:block> /*/-->
 
@@ -30,6 +28,8 @@
 			</div>
 			<div class="reviews-section">
 			    <!-- pop-up-box -->
+				<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+				<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 
 				<script>
                     $(document).ready(function() {
@@ -76,11 +76,10 @@
 										</form>
 									</div>
 									<div class="wt text-center">
-										<a class="play-icon popup-with-zoom-anim" href="#small-dialog">WATCH THIS TRAILER</a>
+										<a class="play-icon popup-with-zoom-anim btn btn-warning" href="#small-dialog">WATCH THIS TRAILER</a>
 									</div>
 					                <div id="small-dialog" class="mfp-hide">
-						                <iframe  src="https://www.youtube.com/embed/2LqzF5WauAw" frameborder="0"
-								                 allowfullscreen="allowfullscreen"></iframe>
+						                <iframe th:src="@{ ${movie.trailer} }" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 					                </div>
 									<div class="clearfix"></div>
 								</div>
@@ -91,137 +90,6 @@
 							</div>
 							<div class="clearfix"></div>
 						</div>
-
-						<!--
-						<div class="review">
-							<div class="movie-pic">
-								<a href="single.html"><img src="images/r6.jpg" alt="" /></a>
-							</div>
-							<div class="review-info">
-								<a class="span" href="single.html">Big Hero6  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
-								<div class="clearfix"></div>
-								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<p class="ratingview c-rating">
-								&nbsp; 3.3/5</p>
-								<div class="clearfix"></div>
-								<div class="yrw">
-									<div class="rtm text-center">
-										<a href="ticket">BOOK NOW</a>
-									</div>
-									<div class="wt text-center">
-										<a class="play-icon popup-with-zoom-anim" href="#small-dialog">WATCH THIS TRAILER</a>
-									</div>
-					                <div id="small-dialog" class="mfp-hide">
-						                <iframe  src="https://www.youtube.com/embed/2LqzF5WauAw" frameborder="0"
-								                 allowfullscreen="allowfullscreen"></iframe>
-					                </div>
-									<div class="clearfix"></div>
-								</div>
-								<p class="info">CAST:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Will Smith, Margot Robbie, Adrian Martinez, Rodrigo Santoro, BD Wong, Robert Taylor</p>
-								<p class="info">DIRECTION: &nbsp;&nbsp;&nbsp;&nbsp;Glenn Ficarra, John Requa</p>
-								<p class="info">GENRE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crime</p>
-								<p class="info">DURATION:&nbsp;&nbsp;&nbsp; &nbsp; 1 hour 45 minutes</p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="review">
-							<div class="movie-pic">
-								<a href="single.html"><img src="images/r5.jpg" alt="" /></a>
-							</div>
-							<div class="review-info">
-								<a class="span" href="single.html">Interstellar  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
-								<div class="clearfix"></div>
-								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<p class="ratingview c-rating">
-								&nbsp; 3.3/5</p>
-								<div class="clearfix"></div>
-								<div class="yrw">
-									<div class="rtm text-center">
-										<a href="ticket">BOOK NOW</a>
-									</div>
-									<div class="wt text-center">
-										<a class="play-icon popup-with-zoom-anim" href="#small-dialog">WATCH THIS TRAILER</a>
-									</div>
-					                <div id="small-dialog" class="mfp-hide">
-						                <iframe  src="https://www.youtube.com/embed/2LqzF5WauAw" frameborder="0"
-								                 allowfullscreen="allowfullscreen"></iframe>
-					                </div>
-									<div class="clearfix"></div>
-								</div>
-								<p class="info">CAST:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Will Smith, Margot Robbie, Adrian Martinez, Rodrigo Santoro, BD Wong, Robert Taylor</p>
-								<p class="info">DIRECTION: &nbsp;&nbsp;&nbsp;&nbsp;Glenn Ficarra, John Requa</p>
-								<p class="info">GENRE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crime</p>
-								<p class="info">DURATION:&nbsp;&nbsp;&nbsp; &nbsp; 1 hour 45 minutes</p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="review">
-							<div class="movie-pic">
-								<a href="single.html"><img src="images/r1.jpg" alt="" /></a>
-							</div>
-							<div class="review-info">
-								<a class="span" href="single.html">Interstellar  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
-								<div class="clearfix"></div>
-								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<p class="ratingview c-rating">
-								&nbsp; 3.3/5</p>
-								<div class="clearfix"></div>
-								<div class="yrw">
-									<div class="rtm text-center">
-										<a href="ticket">BOOK NOW</a>
-									</div>
-									<div class="wt text-center">
-										<a class="play-icon popup-with-zoom-anim" href="#small-dialog">WATCH THIS TRAILER</a>
-									</div>
-					                <div id="small-dialog" class="mfp-hide">
-						                <iframe  src="https://www.youtube.com/embed/2LqzF5WauAw" frameborder="0"
-								                 allowfullscreen="allowfullscreen"></iframe>
-					                </div>
-									<div class="clearfix"></div>
-								</div>
-								<p class="info">CAST:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Will Smith, Margot Robbie, Adrian Martinez, Rodrigo Santoro, BD Wong, Robert Taylor</p>
-								<p class="info">DIRECTION: &nbsp;&nbsp;&nbsp;&nbsp;Glenn Ficarra, John Requa</p>
-								<p class="info">GENRE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crime</p>
-								<p class="info">DURATION:&nbsp;&nbsp;&nbsp; &nbsp; 1 hour 45 minutes</p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="review">
-							<div class="movie-pic">
-								<a href="single.html"><img src="images/r3.jpg" alt="" /></a>
-							</div>
-							<div class="review-info">
-								<a class="span" href="single.html">Interstellar  <i>Movie Review</i></a>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
-								<div class="clearfix"></div>
-								<p class="ratingview c-rating">Avg Readers' Rating:</p>
-								<p class="ratingview c-rating">
-								&nbsp; 3.3/5</p>
-								<div class="clearfix"></div>
-								<div class="yrw">
-									<div class="rtm text-center">
-										<a href="ticket">BOOK NOW</a>
-									</div>
-									<div class="wt text-center">
-										<a class="play-icon popup-with-zoom-anim" href="#small-dialog">WATCH THIS TRAILER</a>
-									</div>
-					                <div id="small-dialog" class="mfp-hide">
-						                <iframe  src="https://www.youtube.com/embed/2LqzF5WauAw" frameborder="0"
-								                 allowfullscreen="allowfullscreen"></iframe>
-					                </div>
-									<div class="clearfix"></div>
-								</div>
-								<p class="info">CAST:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Will Smith, Margot Robbie, Adrian Martinez, Rodrigo Santoro, BD Wong, Robert Taylor</p>
-								<p class="info">DIRECTION: &nbsp;&nbsp;&nbsp;&nbsp;Glenn Ficarra, John Requa</p>
-								<p class="info">GENRE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crime</p>
-								<p class="info">DURATION:&nbsp;&nbsp;&nbsp; &nbsp; 1 hour 45 minutes</p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						-->
 
 					</div>
 					<div class="col-md-3 side-bar">
