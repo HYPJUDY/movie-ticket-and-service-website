@@ -99,7 +99,7 @@ What to do before running
 ## Iteration 3: Nginx
 Fuyu Wang, 2017/6/10
 
-###How to start nginx
+### How to start nginx
 1. Install, configure, and configure, following the blogs below.
 2. Start nginx by command "./nginx"
 3. My ip is "172.20.10.7", by Browser without inputing port, we can get:
