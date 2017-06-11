@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:th="http://www.thymeleaf.org">
+xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<title>Movie Ticket and Service Website | Reviews</title>
@@ -13,42 +13,42 @@
 <body>
 	<!-- header-section-starts -->
 	<div class="full">
-			<div class="menu">
-				<ul>
-					<li><a href="index.html"><div class="hm"><i class="home1"></i><i class="home2"></i></div></a></li>
-					<li><a href="videos.html"><div class="video"><i class="videos"></i><i class="videos1"></i></div></a></li>
-					<li><a class="active" href="reviews.html"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
-					<li><a href="ticket.html"><div class="bk"><i class="booking"></i><i class="booking1"></i></div></a></li>
-				</ul>
-			</div>
+		<div class="menu">
+			<ul>
+				<li><a href="index.html"><div class="hm"><i class="home1"></i><i class="home2"></i></div></a></li>
+				<li><a href="videos.html"><div class="video"><i class="videos"></i><i class="videos1"></i></div></a></li>
+				<li><a class="active" href="reviews.html"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
+				<li><a href="ticket.html"><div class="bk"><i class="booking"></i><i class="booking1"></i></div></a></li>
+			</ul>
+		</div>
 		<div class="main">
-		<div class="review-content">
-			<div class="top-header span_top">
-				<!--/*/ <th:block th:include="fragments/utils :: header"></th:block> /*/-->
-			</div>
-			<div class="reviews-section">
-			    <!-- pop-up-box -->
-				<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-				<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+			<div class="review-content">
+				<div class="top-header span_top">
+					<!--/*/ <th:block th:include="fragments/utils :: header"></th:block> /*/-->
+				</div>
+				<div class="reviews-section">
+					<!-- pop-up-box -->
+					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 
-				<script>
-                    $(document).ready(function() {
-                        $('.popup-with-zoom-anim').magnificPopup({
-                            type: 'inline',
-                            fixedContentPos: false,
-                            fixedBgPos: true,
-                            overflowY: 'auto',
-                            closeBtnInside: true,
-                            preloader: false,
-                            midClick: true,
-                            removalDelay: 300,
-                            mainClass: 'my-mfp-zoom-in'
-                        });
-                    });
-				</script>
+					<script>
+						$(document).ready(function() {
+							$('.popup-with-zoom-anim').magnificPopup({
+								type: 'inline',
+								fixedContentPos: false,
+								fixedBgPos: true,
+								overflowY: 'auto',
+								closeBtnInside: true,
+								preloader: false,
+								midClick: true,
+								removalDelay: 300,
+								mainClass: 'my-mfp-zoom-in'
+							});
+						});
+					</script>
 
-				<!--//pop-up-box -->
-				<h3 class="head">Movie on the Theater</h3>
+					<!--//pop-up-box -->
+					<h3 class="head">Movie on the Theater</h3>
 					<div class="col-md-9 reviews-grids">
 						<div class="review" th:each="movie : ${movies}">
 							<div class="movie-pic">
@@ -60,208 +60,85 @@
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
 								<p class="ratingview c-rating" th:text="${movie.rating}">
-								&nbsp; 3.3/5</p>
-								<div class="clearfix"></div>
-								<div class="yrw">
-									<div class="rtm text-center">
-										<form id="ticket-form" action="#" th:action="@{/ticket}" method="GET">
-											<fieldset>
-												<div class="form-group input-group">
-													<input name = "mname" th:value="${movie.mname}" style="display:none;"/>
-													<span class="input-group-btn">
-                    									<input class="btn btn-warning" type="submit" value="BOOK NOW" />
-													</span>
-												</div>
-											</fieldset>
-										</form>
-									</div>
-									<div class="wt text-center">
-										<a class="play-icon popup-with-zoom-anim btn btn-warning" href="#small-dialog">WATCH THIS TRAILER</a>
-									</div>
-					                <div id="small-dialog" class="mfp-hide">
-						                <iframe th:src="@{ ${movie.trailer} }" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-					                </div>
+									&nbsp; 3.3/5</p>
 									<div class="clearfix"></div>
+									<div class="yrw">
+										<div class="rtm text-center">
+											<form id="ticket-form" action="#" th:action="@{/ticket}" method="GET">
+												<fieldset>
+													<div class="form-group input-group">
+														<input name = "mname" th:value="${movie.mname}" style="display:none;"/>
+														<span class="input-group-btn">
+															<input class="btn btn-warning" type="submit" value="BOOK NOW" />
+														</span>
+													</div>
+												</fieldset>
+											</form>
+										</div>
+										<div class="wt text-center">
+											<a class="play-icon popup-with-zoom-anim btn btn-warning" href="#small-dialog">WATCH THIS TRAILER</a>
+										</div>
+										<div id="small-dialog" class="mfp-hide">
+											<iframe th:src="@{ ${movie.trailer} }" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<p class="info" th:text="${movie.cast}">CAST:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Will Smith, Margot Robbie, Adrian Martinez, Rodrigo Santoro, BD Wong, Robert Taylor</p>
+									<p class="info" th:text="${movie.direction}">DIRECTION: &nbsp;&nbsp;&nbsp;&nbsp;Glenn Ficarra, John Requa</p>
+									<p class="info" th:text="${movie.genre}">GENRE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crime</p>
+									<p class="info" th:text="${movie.duration}">DURATION:&nbsp;&nbsp;&nbsp; &nbsp; 1 hour 45 minutes</p>
 								</div>
-								<p class="info" th:text="${movie.cast}">CAST:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Will Smith, Margot Robbie, Adrian Martinez, Rodrigo Santoro, BD Wong, Robert Taylor</p>
-								<p class="info" th:text="${movie.direction}">DIRECTION: &nbsp;&nbsp;&nbsp;&nbsp;Glenn Ficarra, John Requa</p>
-								<p class="info" th:text="${movie.genre}">GENRE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crime</p>
-								<p class="info" th:text="${movie.duration}">DURATION:&nbsp;&nbsp;&nbsp; &nbsp; 1 hour 45 minutes</p>
+								<div class="clearfix"></div>
 							</div>
-							<div class="clearfix"></div>
+
 						</div>
 
+						<div class="clearfix"></div>
 					</div>
-					<div class="col-md-3 side-bar">
-						<div class="entertainment">
-							<h3>Featured Today in Entertainment</h3>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f6.jpg" alt="" /></a>
-								</li>
-								<li>
-									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
-								
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f5.jpg" alt="" /></a>
-								</li>
-									<li>
-									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
-							
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f3.jpg" alt="" /></a>
-								</li>
-								<li>
-									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
-								
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f4.jpg" alt="" /></a>
-								</li>
-								<li>
-									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
-								
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f2.jpg" alt="" /></a>
-								</li>
-								<li>
-									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
-							
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-							<ul>
-								<li class="ent">
-									<a href="single.html"><img src="images/f1.jpg" alt="" /></a>
-								</li>
-								<li>
-									<a href="single.html">Watch 鈥楤ombay Velvet鈥� trailer during WC match</a>
-								
-								</li>
-								<div class="clearfix"></div>
-							</ul>
-						</div>
-						<div class="might">
-				<h4>You might also like</h4>
-				<div class="might-grid">
-					<div class="grid-might">
-						<a href="single.html"><img src="images/mi.jpg" class="img-responsive" alt=""/> </a>
-					</div>
-					<div class="might-top">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
-						<a href="single.html">Lorem Ipsum <i> </i></a>
-					</div>
-				<div class="clearfix"></div>
 				</div>
-				<div class="might-grid">
-					<div class="grid-might">
-						<a href="single.html"><img src="images/mi1.jpg" class="img-responsive" alt=""/> </a>
-					</div>
-					<div class="might-top">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
-						<a href="single.html">Lorem Ipsum <i> </i></a>
-					</div>
-				<div class="clearfix"></div>
-				</div>
-				<div class="might-grid">
-					<div class="grid-might">
-						<a href="single.html"><img src="images/mi2.jpg" class="img-responsive" alt=""/> </a>
-					</div>
-					<div class="might-top">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
-						<a href="single.html">Lorem Ipsum <i> </i></a>
-					</div>
-				<div class="clearfix"></div>
-				</div>
-				<div class="might-grid">
-					<div class="grid-might">
-						<a href="single.html"><img src="images/mi3.jpg" class="img-responsive" alt=""/> </a>
-					</div>
-					<div class="might-top">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
-						<a href="single.html">Lorem Ipsum <i> </i></a>
-					</div>
-				<div class="clearfix"></div>
-				</div>
-			</div>
-			<!---->
-				<div class="grid-top">
-				<h4>Archives</h4>
-				<ul>
-					<li><a href="single.html">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </a></li>
-					<li><a href="single.html">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</a></li>
-					<li><a href="single.html">When an unknown printer took a galley of type and scrambled it to make a type specimen book. </a> </li>
-					<li><a href="single.html">It has survived not only five centuries, but also the leap into electronic typesetting</a> </li>
-					<li><a href="single.html">Remaining essentially unchanged. It was popularised in the 1960s with the release of </a> </li>
-					<li><a href="single.html">Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing </a> </li>
-					<li><a href="single.html">Software like Aldus PageMaker including versionsof Lorem Ipsum.</a> </li>
-				</ul>
-				</div>
-				<!---->
+				<div class="review-slider">
+					<ul id="flexiselDemo1">
+						<li><img src="images/r1.jpg" alt=""/></li>
+						<li><img src="images/r2.jpg" alt=""/></li>
+						<li><img src="images/r3.jpg" alt=""/></li>
+						<li><img src="images/r4.jpg" alt=""/></li>
+						<li><img src="images/r5.jpg" alt=""/></li>
+						<li><img src="images/r6.jpg" alt=""/></li>
+					</ul>
+					<script type="text/javascript">
+						$(window).load(function() {
 
-					</div>
-
-					<div class="clearfix"></div>
+							$("#flexiselDemo1").flexisel({
+								visibleItems: 6,
+								animationSpeed: 1000,
+								autoPlay: true,
+								autoPlaySpeed: 3000,    		
+								pauseOnHover: false,
+								enableResponsiveBreakpoints: true,
+								responsiveBreakpoints: { 
+									portrait: { 
+										changePoint:480,
+										visibleItems: 2
+									}, 
+									landscape: { 
+										changePoint:640,
+										visibleItems: 3
+									},
+									tablet: { 
+										changePoint:768,
+										visibleItems: 3
+									}
+								}
+							});
+						});
+					</script>
+					<script type="text/javascript" src="js/jquery.flexisel.js"></script>	
+				</div>		
+				<div class="footer">
+					<!--/*/ <th:block th:include="fragments/utils :: footer"></th:block> /*/-->
+				</div>	
 			</div>
-			</div>
-		<div class="review-slider">
-			 <ul id="flexiselDemo1">
-			<li><img src="images/r1.jpg" alt=""/></li>
-			<li><img src="images/r2.jpg" alt=""/></li>
-			<li><img src="images/r3.jpg" alt=""/></li>
-			<li><img src="images/r4.jpg" alt=""/></li>
-			<li><img src="images/r5.jpg" alt=""/></li>
-			<li><img src="images/r6.jpg" alt=""/></li>
-		</ul>
-			<script type="text/javascript">
-		$(window).load(function() {
-			
-		  $("#flexiselDemo1").flexisel({
-				visibleItems: 6,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,    		
-				pauseOnHover: false,
-				enableResponsiveBreakpoints: true,
-				responsiveBreakpoints: { 
-					portrait: { 
-						changePoint:480,
-						visibleItems: 2
-					}, 
-					landscape: { 
-						changePoint:640,
-						visibleItems: 3
-					},
-					tablet: { 
-						changePoint:768,
-						visibleItems: 3
-					}
-				}
-			});
-			});
-		</script>
-		<script type="text/javascript" src="js/jquery.flexisel.js"></script>	
-		</div>		
-	<div class="footer">
-		<!--/*/ <th:block th:include="fragments/utils :: footer"></th:block> /*/-->
-	</div>	
-	</div>
-	<div class="clearfix"></div>
-	</div>
-</body>
-</html>
+			<div class="clearfix"></div>
+		</div>
+	</body>
+	</html>
