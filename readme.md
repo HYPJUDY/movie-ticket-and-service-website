@@ -21,8 +21,8 @@ Project of Software System Analysis and Design by Maolin Pan, SYSU, 2017.
 1. Investigation 产品调查
 2. Inception 初始阶段分析与设计
 3. Iteration 1 原型构建
-4. Iteration 2 数据库及其他业务逻辑
-5. Iteration 3 分布式部署
+4. Iteration 2 数据库和用户认证
+5. Iteration 3 负载均衡
 
 ## 产品（artifacts）提交与展示
 * 个人提交
