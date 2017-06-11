@@ -17,7 +17,6 @@ public class CustomerService {
     public CustomerService() {
         super();
     }
-    
     public void create(final Customer entity) {
         dao.create(entity);
     }

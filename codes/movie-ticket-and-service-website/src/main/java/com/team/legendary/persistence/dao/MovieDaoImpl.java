@@ -30,7 +30,7 @@ public class MovieDaoImpl implements MovieDao {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
-	public static final class DishMapper implements RowMapper<Movie> {
+	public static final class MovieMapper implements RowMapper<Movie> {
 
 		public Movie mapRow(ResultSet rs, int rowNum) throws SQLException {
 			// TODO Auto-generated method stub
@@ -53,12 +53,12 @@ public class MovieDaoImpl implements MovieDao {
 	}
 
 	public List<Movie> findAll() {
-		List<Movie> dishs = this.jdbcTemplate.query("select * from Movie", new DishMapper());
+		List<Movie> dishs = this.jdbcTemplate.query("select * from Movie", new MovieMapper());
 		return dishs;
 	}
 
 	public Movie findOne(String name) {
-		List<Movie> movies = this.jdbcTemplate.query("select * from Movie where mname = '" + name + "'", new DishMapper());
+		List<Movie> movies = this.jdbcTemplate.query("select * from Movie where mname = '" + name + "'", new MovieMapper());
 		if (movies.isEmpty()) return null;
 		return movies.get(0);
 	}

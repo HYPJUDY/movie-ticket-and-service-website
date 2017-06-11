@@ -21,7 +21,7 @@ public class IndexController {
 
     @RequestMapping("/ticket")
     String ticket() {
-        return  "ticket";
+        return  "ticket/";
     }
     
     @RequestMapping("/reviews")
