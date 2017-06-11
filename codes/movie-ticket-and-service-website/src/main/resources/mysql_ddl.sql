@@ -1,11 +1,11 @@
-DROP DATABASE movie_ticket;
+﻿DROP DATABASE movie_ticket;
 CREATE DATABASE movie_ticket;
 use movie_ticket;
 ALTER DATABASE CHARACTER SET "utf8";
 CREATE TABLE Customer (
      cname CHAR(30) NOT NULL,
-     password char(30) not null
-
+     password char(30) not null,
+     PRIMARY KEY (cname)
 );
 
 CREATE TABLE Movie (
