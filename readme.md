@@ -18,11 +18,10 @@ Project of Software System Analysis and Design by Maolin Pan, SYSU, 2017.
 * 在MVC框架下构建程序
 
 ## 生产过程控制
-1. Investigation 产品调查
-2. Inception 初始阶段分析与设计
-3. Iteration 1 原型构建
-4. Iteration 2 数据库和用户认证
-5. Iteration 3 负载均衡
+1. Inception 初始阶段分析与设计
+2. Iteration 1 原型构建
+3. Iteration 2 数据库和用户认证
+4. Iteration 3 负载均衡
 
 ## 产品（artifacts）提交与展示
 * 个人提交
