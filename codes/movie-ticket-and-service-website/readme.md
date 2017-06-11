@@ -95,3 +95,17 @@ What to do before running
 2. Tutorial series -- SPRING BOOT WEB APPLICATION: [PART 1 - Spring Initializer](https://springframework.guru/spring-boot-web-application-part-1-spring-initializr/), [PART 2 - Using Thymeleaf](https://springframework.guru/spring-boot-web-application-part-2-using-thymeleaf/), [PART 3 - Spring Data JPA](https://springframework.guru/spring-boot-web-application-part-3-spring-data-jpa/), [PART 4 - Spring MVC](https://springframework.guru/spring-boot-web-application-part-4-spring-mvc/) and [PART 5 - Spring Security](https://springframework.guru/spring-boot-web-application-part-5-spring-security/).
 3. [Cinema a Entertainment Category Flat Bootstrap Responsive Web Template](https://w3layouts.com/cinema-a-entertainment-category-flat-bootstrap-responsive-web-template/)
 4. [Movie Ticket Booking Widget Flat Responsive Widget Template](https://w3layouts.com/movie-ticket-booking-widget-flat-responsive-widget-template/)
+
+## Iteration 3: Nginx
+Fuyu Wang, 2017/6/10
+
+###How to start nginx
+1. Install, configure, and configure, following the blogs below.
+2. Start nginx by command "./nginx"
+3. My ip is "172.20.10.7", by Browser without inputing port, we can get:
+<img src="../../assets/demo/nginx-demo.png" width="45%" />
+
+# Reference
+1. [Install and Deploy] (http://www.nginx.cn/install)
+2. [Configure] (http://www.ha97.com/5194.html)
+3. [Sticky] (https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng/overview)
