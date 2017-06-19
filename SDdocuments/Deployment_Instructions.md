@@ -1,6 +1,6 @@
 # Deployment Instruction
 
-##To run the application, please follow the instructions below:
+### To run the application, please follow the instructions below:
 
 1. Download `movie-ticket-and-service-website` repository.
 2. Download and config MySQL Server. For example, you can refer to [Ubuntu下安装MySQL及简单操作](http://www.linuxidc.com/Linux/2016-07/133128.htm). Now you should have successfully started sql by using command `net start MySQL` in cmd (better to run as administrator>.
@@ -23,7 +23,7 @@
     * Import the project (path: `movie-ticket-and-service-website/codes/movie-ticket-and-service-website/`) to Eclipse.
     * Run -> Run as -> Maven build... -> Goals:"clean compile jetty:run"
 
-## Note that following steps are not necessary and basic on linux system. If you just want to run the applications, you can skip to step 9, but remember to add port number 8080 in the url to visit in your browser, such as `http://localhost:8080/login`.
+### Note that following steps are not necessary and basic on linux system. If you just want to run the applications, you can skip to step 9, but remember to add port number 8080 in the url to visit in your browser, such as `http://localhost:8080/login`.
 
 7. Download the [Nginx-1.13.0](http://www.nginx.org/) and follow the configure instructions refering to [ubuntu nginx 安装以及配置文件详解](http://linmomo02.iteye.com/blog/1490657).
 
