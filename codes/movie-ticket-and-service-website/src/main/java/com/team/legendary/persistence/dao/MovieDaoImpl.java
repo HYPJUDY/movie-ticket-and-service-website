@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import javax.sql.DataSource;
 
@@ -53,8 +55,13 @@ public class MovieDaoImpl implements MovieDao {
 	}
 
 	public List<Movie> findAll() {
-		List<Movie> dishs = this.jdbcTemplate.query("select * from Movie", new MovieMapper());
-		return dishs;
+		List<Movie> movies = this.jdbcTemplate.query("select * from Movie", new MovieMapper());
+		Collections.sort(movies, new Comparator<Movie>(){
+            public int compare(Movie arg0, Movie arg1) {
+                return arg1.getRating().compareTo(arg0.getRating());
+            }
+        });
+		return movies;
 	}
 
 	public Movie findOne(String name) {
