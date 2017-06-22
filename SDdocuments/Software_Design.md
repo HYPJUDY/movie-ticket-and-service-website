@@ -23,7 +23,7 @@
 		Our project mainly includes three entity classes that we just simply define their properties and annotate them. However, these classes must implement the Serializable interface, otherwise the object can not be saved to the byte stream for network transmission.
 
 		Owned module: Model in Spring MVC
-		Code location: D:\MyProjects\movie-ticket-and-service-website\codes\movie-ticket-and-service-website\src\main\java\com\team\legendary\persistence\entity
+		Code location: codes\movie-ticket-and-service-website\src\main\java\com\team\legendary\persistence\entity
 
 		2.2.2 Dao/DaoImpl
 
