@@ -12,6 +12,16 @@
 ![](../assets/images/deployment.png)
 
 ### 1.3 Module Partition
+We use Model–view–controller (MVC) because it modularized code and promotes code reuse.
+
+#### Model
+Model refers to a data model, or some type of data structure. For example, in movie ticket and service website, the ‘model’ would contain a list of movie data and user data (username, password..).
+
+#### View
+View module is mainly used to display pages to viewers. We use Thymeleaf -- a modern server-side Java template engine for both web and standalone environments -- in Spring. It performs server-side redering of the HTML.
+
+#### Controller
+Also known as application logic layer. Mainly used to process data. In order to visit the website, we need to design urls. For example, the application will accept HTTP GET requests at both `http://localhost:8080/` and `http://localhost:8080/index.html` and respond with the index page displaying HTML. HTTP requests are handled by a controller.
 
 ## Part 2: Technology List
 ### 2.1 Structure Programming
