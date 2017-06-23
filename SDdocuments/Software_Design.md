@@ -9,7 +9,7 @@
 4. Spring provides a good integrated support for many popular frameworks, such as hibernate, Struts2, JPA and so on.
 
 ### 1.2 Architecture Design
-
+![](../assets/images/deployment.png)
 
 ### 1.3 Module Partition
 
