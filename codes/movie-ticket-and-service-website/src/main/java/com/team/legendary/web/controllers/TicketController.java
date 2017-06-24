@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.team.legendary.persistence.entity.Customer;
 import com.team.legendary.persistence.entity.Movie;
 import com.team.legendary.persistence.entity.Order;
 
@@ -32,14 +33,18 @@ public class TicketController {
 
     @Autowired
     private MovieService movieService;
-	
+
     @GetMapping
-    public String getTicket(@RequestParam("mname") String movieName, Model model) {
+    public String getTicket(@RequestParam("mname") String movieName,@ModelAttribute("customer")Customer customer, Model model) {
         Subject subject = SecurityUtils.getSubject();
+        if (subject == null || subject.getPrincipal() == null) return "login";
+        String cname = subject.getPrincipal().toString();
+        System.out.println(cname);
+        
         Boolean vipFlag = false;
         System.out.print(movieName);
         //VIP通道
-        if (subject.hasRole("CustomerVIP") && subject.isPermitted("Dischange")) {
+        if (SecurityUtils.getSubject().hasRole("CustomerVIP") && SecurityUtils.getSubject().isPermitted("Dischange")) {
             vipFlag = true;
         }
         model.addAttribute("vipFlag", vipFlag);
