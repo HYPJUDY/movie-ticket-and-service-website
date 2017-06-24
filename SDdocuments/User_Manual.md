@@ -18,13 +18,16 @@
 ![](../assets/images/操作图1.png)
 
 解压后通过Eclipse Import Maven Project导入该项目
+
 ![](../assets/images/操作图2.png)
 
 
 登陆mysql，使用mysql_ddl.sql建立起数据库
+
 ![](../assets/images/操作图3.png)
 
 通过maven bulid并使用jetty服务器编译运行该项目
+
 ![4](../assets/images/操作图4.png)
 
 ### 3.2 运行界面
@@ -51,6 +54,7 @@
 
 订单成功后
 ![](../assets/images/界面6.png)
+点击logout返回首页界面
 
 
 
