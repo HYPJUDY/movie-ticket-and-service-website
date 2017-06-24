@@ -13,7 +13,11 @@ public class LoginoutController {
 	@RequestMapping("/loginout")
     public String loginout() {
 		Subject subject = SecurityUtils.getSubject();
-		subject.logout();
+		if (subject != null) {
+			String cname = subject.getPrincipal().toString();
+			System.out.println(cname + "login out");
+			subject.logout();
+		}
         return "index";
     }
 }

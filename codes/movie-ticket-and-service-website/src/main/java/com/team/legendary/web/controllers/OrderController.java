@@ -40,10 +40,11 @@ public class OrderController {
 
 
 		Movie movie = movieService.findByName(order.getMname());
-		Subject subject = SecurityUtils.getSubject();
-		order.setCname(subject.getPrincipal().toString());
+		//Subject subject = SecurityUtils.getSubject();
+		if (SecurityUtils.getSubject() == null) return "index";
+		order.setCname(SecurityUtils.getSubject().getPrincipal().toString());
 		order.setExpenditure(order.getCount() * movie.getPrice());
-        System.out.println(subject.getPrincipal().toString());
+        System.out.println(SecurityUtils.getSubject().getPrincipal().toString());
 
         orderService.create(order);
 
