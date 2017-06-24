@@ -19,7 +19,7 @@
         <!-- <property name="url" value="jdbc:mysql://127.0.0.1:3306/movie_ticket?createDatabaseIfNotExist=true&amp;useSSL=true" /> -->
          
         <!-- Linux User -->
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/movie_ticket?createDatabaseIfNotExist=true&amp;useSSL=true" />
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/movie_ticket?verifyServerCertificate=false&amp;createDatabaseIfNotExist=true&amp;useSSL=true" />
         
         <property name="username" value="root" />
         <property name="password" value="root" />
