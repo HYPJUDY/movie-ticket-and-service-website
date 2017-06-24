@@ -14,6 +14,6 @@ public class LoginoutController {
     public String loginout() {
 		Subject subject = SecurityUtils.getSubject();
 		subject.logout();
-        return "loginout";
+        return "index";
     }
 }
