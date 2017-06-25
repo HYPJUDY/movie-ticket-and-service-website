@@ -727,7 +727,7 @@ p.dirctr a {
 	text-decoration:none;
 }
 .yrw {
-	margin: 2em 0;
+	/*margin: 2em 0;*/
 }
 p.ratingview {
 	color: #000;
@@ -1268,7 +1268,7 @@ font-weight: 700;
 		font-size: 2.3em;
 	}
 	.rtm,.wt {
-		width: 27%;
+		/*width: 27%;*/
 	}
 	.header-info {
 		padding-top: 2em;
@@ -1370,7 +1370,7 @@ font-weight: 700;
 		width: 25%;
 	}
 	.rtm, .wt {
-		width: 32%;
+		/* width: 32%; */
 	}
 	.dropdown {
 		width: 27%;
@@ -1452,7 +1452,7 @@ font-weight: 700;
 		font-size: 15px;
 	}
 	.yrw {
-		margin: 1.3em 0;
+		/*margin: 1.3em 0;*/
 	}
 }
 @media screen and (max-width: 1024px) {
@@ -1585,7 +1585,7 @@ font-weight: 700;
 		font-size: 0.95em;
 	}
 	.rtm, .wt {
-		width: 36%;
+		/*width: 36%;*/
 	}	
 	p.info {
 		font-size: 0.95em;
@@ -1627,7 +1627,7 @@ font-weight: 700;
 		margin: 5px 10px;
 	}
 	.yrw {
-		margin: 1em 0;
+		/*margin: 1em 0;*/
 	}
 }
 @media screen and (max-width: 800px) {
