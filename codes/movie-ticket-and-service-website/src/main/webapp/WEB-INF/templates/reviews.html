@@ -55,7 +55,7 @@ xmlns:th="http://www.thymeleaf.org">
 								<a th:href="@{'/single/'+ ${ movie.mname }}"><img th:src="@{ '/images/' + ${ movie.poster }}" alt="" /></a>
 							</div>
 							<div class="review-info">
-								<a class="span" th:text="${movie.mname}" th:href="@{'/single/'+ ${ movie.mname }}">Interstellar  <i>Movie Review</i></a>
+								<a class="span" th:text="${movie.mname}">Interstellar  <i>Movie Review</i></a>
 								<p class="dirctr" th:text="${movie.description}"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>
 								<div class="clearfix"></div>
 								<p class="ratingview c-rating">Avg Readers' Rating:</p>
